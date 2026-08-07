@@ -12,3 +12,7 @@ private/
 replit.nix
 .quartz/
 quartz/cli/tui/dist/
+
+# 쇼츠·영상 산출물 (YouTube용 — Pages/Git에 올리지 않음)
+*.mp4
+미디어/쇼츠-샘플/
