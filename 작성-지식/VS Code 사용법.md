@@ -189,7 +189,43 @@ Visual Studio Code는 **폴더를 하나의 프로젝트(워크스페이스)로 
 | 사이드바 숨기기 | `Ctrl + B` |
 | Zen Mode (집중) | `Ctrl + K` 후 `Z` |
 
-비교(diff): 탐색기에서 파일 우클릭 → **Select for Compare**, 다른 파일에서 **Compare with Selected**.
+### 파일 비교 (diff)
+
+두 파일(또는 같은 파일의 다른 버전)을 **좌우 diff**로 본다. 폴더 통째 비교는 [[WinMerge 사용법]].
+
+#### 팔레트 — Compare Active File With (추천 습관)
+
+지금 열어 둔 파일을 기준으로 다른 파일과 비교할 때:
+
+1. 비교의 **한쪽**이 될 파일을 연다 (활성 탭)  
+2. `Ctrl + Shift + P` 로 명령 팔레트  
+3. `Compare Active File With` 입력 · 실행  
+   (한글 UI면 **활성 파일 비교** / **활성 파일을 다음과 비교** 등으로 검색)  
+4. 목록에서 **다른 쪽 파일**을 고른다  
+
+워크스페이스 안 파일뿐 아니라, 안내에 따라 **최근 파일·디스크의 다른 경로**도 고를 수 있다.
+
+비슷한 명령:
+
+| 명령 (영문 검색어) | 감각 |
+|--------------------|------|
+| `Compare Active File With...` | 활성 탭 vs 고른 파일 |
+| `Compare Active File With Saved` | 저장 안 한 수정 vs 디스크에 저장된 내용 |
+| `File: Compare Active File With Clipboard` | 활성 파일 vs 클립보드 (버전에 따라 존재) |
+
+명령 이름·번역은 VS Code 버전에 따라 조금 다를 수 있으니, 팔레트에 `Compare` / `비교`만 쳐도 후보가 뜬다.
+
+#### 탐색기에서 두 파일 지정
+
+1. 탐색기에서 파일 A 우클릭 → **Select for Compare** (비교할 항목 선택)  
+2. 파일 B 우클릭 → **Compare with Selected** (선택 항목과 비교)  
+
+탭을 미리 열어 두지 않아도 된다.
+
+#### Git 변경분
+
+소스 제어(`Ctrl + Shift + G`)에서 파일 클릭 → **워킹트리 vs 마지막 커밋** diff.  
+개념은 [[Git 사용법]], UI 흐름은 아래 [[#8. Git (소스 제어)]].
 
 ---
 
@@ -208,7 +244,8 @@ Visual Studio Code는 **폴더를 하나의 프로젝트(워크스페이스)로 
 
 ## 8. Git (소스 제어)
 
-사이드바 소스 제어(`Ctrl + Shift + G`) 또는 터미널에서 git 명령을 쓴다.
+사이드바 소스 제어(`Ctrl + Shift + G`) 또는 터미널에서 git 명령을 쓴다.  
+개념·브랜치·원격·충돌은 [[Git 사용법]], 호스팅은 [[GitHub]]·[[GitLab]].
 
 기본 UI 흐름:
 
@@ -291,7 +328,7 @@ VS Code는 diff를 시각적으로 보여 주므로, 커밋 전에 UI로 한 번
 2. **파일은 `Ctrl + P`, 기능은 `Ctrl + Shift + P`** — 마우스로 메뉴를 헤매지 않는다.
 3. **고치기 전에 전체 검색** — `Ctrl + Shift + F`로 영향 범위를 본다.
 4. **다중 커서로 반복 수정** — 같은 문자열은 `Ctrl + D`.
-5. **커밋 전 diff 확인** — 소스 제어에서 한 파일씩 훑는다.
+5. **커밋 전 diff 확인** — 소스 제어에서 한 파일씩 훑는다. 임의 두 파일은 팔레트 `Compare Active File With`.
 6. **확장 최소화** — 느리면 확장부터 의심한다.
 
 ---
@@ -311,5 +348,9 @@ VS Code는 diff를 시각적으로 보여 주므로, 커밋 전에 UI로 한 번
 
 - [[VS Code 추천 확장]] — 용도별 추천 목록
 - [[Cursor 사용법]] — VS Code + AI
+- [[Git 사용법]]
+- [[GitHub]]
+- [[GitLab]]
 - [[Obsidian 사용법]]
+- [[WinMerge 사용법]] — 폴더·대량 파일 비교
 - [[생활위키 목차]]

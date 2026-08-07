@@ -233,7 +233,8 @@ Git 히스토리 대신 폴더 복사본만 있는 환경에서 유용하다.
 ### 9.4 Git과 같이 쓰기
 
 - 일상 커밋 단위: VS Code / Cursor / `git diff`가 더 자연스럽다
-- **워킹트리 밖** 두 디렉터리, 릴리즈 zip vs 현재 트리, 고객 배포본 대조 → WinMerge
+- 워킹트리 밖 두 디렉터리, 릴리즈 zip vs 현재 트리, 고객 배포본 대조 → WinMerge  
+- Git 흐름 자체는 [[Git 사용법]]
 
 Git 외부 diff/merge 도구로 WinMerge를 등록할 수도 있다. (git config의 `difftool` / `mergetool`)
 
@@ -295,3 +296,6 @@ Git 외부 diff/merge 도구로 WinMerge를 등록할 수도 있다. (git config
 - [[생활위키 목차]]
 - [[VS Code 사용법]]
 - [[Cursor 사용법]]
+- [[Git 사용법]]
+- [[GitHub]]
+- [[GitLab]]
