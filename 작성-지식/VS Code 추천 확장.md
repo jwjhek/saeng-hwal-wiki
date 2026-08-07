@@ -150,7 +150,7 @@ Oracle 튜닝 개념은 [[Oracle DB와 튜닝]]. 확장은 “접속 도구”�
 | **Paste Image** | 클립보드 이미지를 폴더에 저장·링크 |
 
 Obsidian vault를 열 때: 편집은 VS Code, `[[위키링크]]`·그래프는 [[Obsidian 사용법]]이 유리하다.  
-공개 여부는 [[공개 규칙]].
+공개 여부는 vault 루트 `공개 규칙.md`(사이트 비공개).
 
 ---
 
@@ -410,7 +410,6 @@ C/C++ Extension Pack
 - [[C언어와 포인터]]
 - [[생활위키 목차]]
 - [[DBeaver 사용법]]
-- [[공개 규칙]]
 - [[Docker 사용법]]
 - [[Oracle DB와 튜닝]]
 - [[Java 언어 학습]]
