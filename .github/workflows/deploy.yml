@@ -40,9 +40,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-plugins-
       - run: npm ci
-      - run: npx quartz plugin install
+      # Windows checkout may lack +x on bin; call Node entry directly
+      - run: node ./quartz/bootstrap-cli.mjs plugin install
       # vault 루트 = 노트 (분류 폴더). publish: true 만 사이트에 포함
-      - run: npx quartz build -d .
+      - run: node ./quartz/bootstrap-cli.mjs build -d .
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
