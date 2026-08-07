@@ -44,6 +44,9 @@ jobs:
       - run: node ./quartz/bootstrap-cli.mjs plugin install
       # vault 루트 = 노트 (분류 폴더). publish: true 만 사이트에 포함
       - run: node ./quartz/bootstrap-cli.mjs build -d .
+      # AdSense ads.txt (사이트 루트). 하위 경로 Pages는 루트 도메인 ads.txt도 필요할 수 있음
+      - run: |
+          printf '%s\n' 'google.com, pub-5443490100809287, DIRECT, f08c47fec0942fa0' > public/ads.txt
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

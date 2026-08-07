@@ -92,6 +92,12 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <meta name="google-adsense-account" content="ca-pub-5443490100809287" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5443490100809287"
+          crossOrigin="anonymous"
+        ></script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
