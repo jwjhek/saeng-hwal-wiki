@@ -278,9 +278,9 @@ plugins:
         - description
         - tags
         - aliases
+      excludedProperties:
         - publish
         - draft
-      excludedProperties: []
       hidePropertiesView: false
       delimiters: "---"
       language: yaml
