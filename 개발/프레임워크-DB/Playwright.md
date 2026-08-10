@@ -12,10 +12,6 @@ Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하
 
 공식: [https://playwright.dev](https://playwright.dev)
 
-> **면책**  
-> 사이트 이용약관·robots·개인정보·저작권을 위반하는 자동 수집·공격에 쓰지 않는다.  
-> 이 글은 학습용이며, CI·버전별 CLI는 공식 문서가 우선이다.
-
 확인일: 2026-08-07
 
 관련 언어: [[Python 학습과 패키지]] · [[Java 언어 학습]] (Java 바인딩) · JS/TS는 Node 생태계
@@ -180,6 +176,14 @@ CI: [[GitHub]] Actions 등에서 `npx playwright install --with-deps` 패턴이 
 
 Playwright는 **멀티 브라우저 E2E·자동화**를 한 API로 다루는 도구다.  
 설치 → codegen/테스트 작성 → locator·trace로 안정화 → CI 순이 기본 흐름이다.
+
+---
+
+## 면책
+
+> **면책**  
+> 사이트 이용약관·robots·개인정보·저작권을 위반하는 자동 수집·공격에 쓰지 않는다.  
+> 이 글은 학습용이며, CI·버전별 CLI는 공식 문서가 우선이다.
 
 ---
 

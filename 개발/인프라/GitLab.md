@@ -14,11 +14,6 @@ Git 명령은 [[Git 사용법]], 비슷한 호스팅·PR 문화는 [[GitHub]].
 공식: [https://gitlab.com](https://gitlab.com)  
 문서: [https://docs.gitlab.com](https://docs.gitlab.com)
 
-> **면책**  
-> 에디션(Free/Premium/Ultimate)·UI·CI 문법은 버전마다 다르다. **공식 문서·회사 인스턴스 안내**가 우선.  
-> Public 프로젝트·러너·변수에 비밀을 넣지 말 것.  
-> 가입·유료 플랜 권유가 아니다.
-
 확인일: 2026-08-07
 
 관련: [[Git 사용법]] · [[GitHub]] · [[Docker 사용법]] · [[쿠버네티스]]
@@ -165,6 +160,15 @@ Kubernetes 배포·GitOps는 [[쿠버네티스]]와 겹친다.
 
 GitLab은 Git 원격에 **MR과 내장 CI/CD**를 붙인 플랫폼이고, 셀프호스트가 강점인 경우가 많다.  
 손의 명령은 [[Git 사용법]], PR 문화 비교는 [[GitHub]]를 보면 된다.
+
+---
+
+## 면책
+
+> **면책**  
+> 에디션(Free/Premium/Ultimate)·UI·CI 문법은 버전마다 다르다. **공식 문서·회사 인스턴스 안내**가 우선.  
+> Public 프로젝트·러너·변수에 비밀을 넣지 말 것.  
+> 가입·유료 플랜 권유가 아니다.
 
 ---
 

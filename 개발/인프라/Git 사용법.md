@@ -13,11 +13,6 @@ draft: false
 공식: [https://git-scm.com](https://git-scm.com)  
 문서: [https://git-scm.com/doc](https://git-scm.com/doc)
 
-> **면책**  
-> 학습용 감각이다. 회사 브랜치·권한·훅 규칙은 **팀 문서**가 우선.  
-> `push --force`·이력 재작성은 **공유 브랜치에서 위험**하다.  
-> 비밀(.env, 키, 비밀번호)을 커밋하지 않는다.
-
 확인일: 2026-08-07
 
 관련: [[GitHub]] · [[GitLab]] · [[VS Code 사용법]] · [[Cursor 사용법]] · [[WinMerge 사용법]]
@@ -221,6 +216,15 @@ private/
 
 Git은 **로컬 커밋 이력**이 본체이고, [[GitHub]]·[[GitLab]]은 그걸 **공유·리뷰·CI**하는 원격이다.  
 매일은 `status` → `add` → `commit` → `push`/`pull`이면 대부분 충분하다.
+
+---
+
+## 면책
+
+> **면책**  
+> 학습용 감각이다. 회사 브랜치·권한·훅 규칙은 **팀 문서**가 우선.  
+> `push --force`·이력 재작성은 **공유 브랜치에서 위험**하다.  
+> 비밀(.env, 키, 비밀번호)을 커밋하지 않는다.
 
 ---
 
