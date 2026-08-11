@@ -170,5 +170,6 @@ Windows에 MS Copilot이 있어도 GitHub Copilot 완성이 자동으로 생기�
 - [[VS Code 사용법]]
 - [[VS Code 추천 확장]]
 - [[Cursor 사용법]]
+- [[바이브 코딩]]
 - [[GitHub]]
 - [[Git 사용법]]

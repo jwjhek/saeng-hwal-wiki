@@ -7,7 +7,7 @@ draft: false
 
 > **분류:** 작성·지식 › 에디터·IDE · [[생활위키 목차]]
 
-Cursor **Agent Skills(스킬)** 는 에이전트에게 특정 작업 절차를 가르치는 `SKILL.md` 묶음이다.  
+Cursor **Agent Skills(스킬)** 는 에이전트에게 특정 작업 절차를 가르치는 `SKILL.md` 묶음이다. 
 채팅·에이전트 기본 조작은 [[Cursor 사용법]], 항상 켜 두는 규칙은 [[#6. 규칙(Rules)과 스킬 차이|규칙]] 쪽을 본다.
 
 제품·경로 UI는 버전에 따라 바뀔 수 있다. 확인일: 2026-08-07
@@ -16,9 +16,9 @@ Cursor **Agent Skills(스킬)** 는 에이전트에게 특정 작업 절차를 �
 
 ---
 
-## 1. 한눈에
+## 1. 개요
 
-| 항목 | 감각 |
+| 항목 | 설명 |
 |------|------|
 | 무엇 | 폴더 하나 + **`SKILL.md`** (필요 시 참고 문서·스크립트) |
 | 하는 일 | PR 리뷰 방식, 커밋 메시지 형식, 위키 작성 절차 등 **반복 워크플로**를 에이전트에 주입 |
@@ -28,7 +28,7 @@ Cursor **Agent Skills(스킬)** 는 에이전트에게 특정 작업 절차를 �
 
 ```text
 SKILL.md (이름·설명·절차)
-    ↓ 에이전트가 필요할 때 읽음
+ ↓ 에이전트가 필요할 때 읽음
 특정 작업만 팀/개인 방식으로 수행
 ```
 
@@ -44,7 +44,7 @@ Windows 예: `C:\Users\사용자\.cursor\skills\my-skill\SKILL.md`
 | 위치 예 | `.cursor/rules/`, 사용자 규칙, `AGENTS.md` | `.cursor/skills/`, `~/.cursor/skills/` |
 | 예 | 한글로 쓰기, 커밋하지 말 것, 폴더 구조 | PDF 추출 절차, 쇼츠 대본 템플릿, 배포 체크리스트 |
 
-둘 다 쓸 수 있다. 짧은 상시 제약은 규칙, **단계가 긴 절차**는 스킬이 맞다.  
+둘 다 쓸 수 있다. 짧은 상시 제약은 규칙, **단계가 긴 절차**는 스킬이 맞다. 
 [[Cursor 사용법]] § 규칙·MCP 언급과 같이 본다.
 
 ---
@@ -53,14 +53,14 @@ Windows 예: `C:\Users\사용자\.cursor\skills\my-skill\SKILL.md`
 
 ```text
 skill-name/
-├── SKILL.md          ← 필수
-├── reference.md      ← 선택 (자세한 참고)
-├── examples.md       ← 선택
-└── scripts/          ← 선택 (헬퍼 스크립트)
+├── SKILL.md ← 필수
+├── reference.md ← 선택 (자세한 참고)
+├── examples.md ← 선택
+└── scripts/ ← 선택 (헬퍼 스크립트)
 ```
 
-- `SKILL.md`는 **대략 500줄 안**을 권장. 길면 `reference.md`로 나누기  
-- 링크는 **한 단계**만 (SKILL → reference). 깊게 중첩하지 말 것  
+- `SKILL.md`는 **대략 500줄 안**을 권장. 길면 `reference.md`로 나누기 
+- 링크는 **한 단계**만 (SKILL → reference). 깊게 중첩하지 말 것 
 - 스크립트 경로 예시는 `scripts/helper.py`처럼 **슬래시** 사용 (백슬래시 지양)
 
 ---
@@ -73,8 +73,8 @@ skill-name/
 ---
 name: wiki-shorts
 description: >
-  생활위키 글에서 YouTube Shorts 대본·체크리스트를 만든다.
-  Use when the user asks for Shorts scripts from wiki notes.
+ 생활위키 글에서 YouTube Shorts 대본·체크리스트를 만든다.
+ Use when the user asks for Shorts scripts from wiki notes.
 disable-model-invocation: true
 ---
 ```
@@ -98,25 +98,25 @@ disable-model-invocation: true
 ```yaml
 # 예
 description: >
-  Generate descriptive commit messages from git diffs.
-  Use when the user asks for commit messages or reviews staged changes.
+ Generate descriptive commit messages from git diffs.
+ Use when the user asks for commit messages or reviews staged changes.
 ```
 
 ### 4.3 본문
 
-- 에이전트가 **이미 아는 일반론**은 줄이기  
-- 체크리스트·템플릿·명령 예시를 구체로  
-- 사용자가 **그대로 쓰라고 한 문장**은 바꿔 쓰지 말 것  
+- 에이전트가 **이미 아는 일반론**은 줄이기 
+- 체크리스트·템플릿·명령 예시를 구체로 
+- 사용자가 **그대로 쓰라고 한 문장**은 바꿔 쓰지 말 것 
 
 ---
 
-## 5. 만드는 순서 (설정 감각)
+## 5. 만드는 순서
 
-1. **목적** — 어떤 작업인가  
-2. **위치** — 개인(`~/.cursor/skills`) vs 프로젝트(`.cursor/skills`)  
-3. **트리거** — 언제 자동/수동으로 쓰게 할 것인가  
-4. **폴더 + SKILL.md** 작성  
-5. Cursor를 쓰며 “○○ 스킬로 …”라고 불러 보거나, 자동 호출이면 관련 요청으로 시험  
+1. **목적** — 어떤 작업인가 
+2. **위치** — 개인(`~/.cursor/skills`) vs 프로젝트(`.cursor/skills`) 
+3. **트리거** — 언제 자동/수동으로 쓰게 할 것인가 
+4. **폴더 + SKILL.md** 작성 
+5. Cursor를 쓰며 “○○ 스킬로 …”라고 불러 보거나, 자동 호출이면 관련 요청으로 시험 
 
 에이전트에게 “스킬 만들어줘”라고 하면, 위 정보를 물어본 뒤 파일을 만들어 주는 흐름이 흔하다.
 
@@ -124,7 +124,7 @@ description: >
 
 ## 6. 호출 · 사용
 
-| 방식 | 감각 |
+| 방식 | 설명 |
 |------|------|
 | 명시 | 채팅에 스킬 이름·경로·“○○ 스킬 따라” |
 | 자동 | `disable-model-invocation`을 끄고 description이 요청과 맞을 때 (버전·설정에 따름) |
@@ -136,13 +136,13 @@ description: >
 
 ## 7. 생활위키에 쓸 때 예
 
-| 스킬 아이디어 | 내용 감각 |
+| 스킬 아이디어 | 내용 |
 |---------------|-----------|
-| 위키 노트 | frontmatter `publish`, 분류 줄, 목차 한 줄 추가 |
+| 위키 노트 | frontmatter `publish`·`depth`, 분류 줄, **`depth: hub`만** 목차 한 줄 |
 | 쇼츠 대본 | [[위키 쇼츠 자동 제작]] 템플릿 |
 | 쿠폰 점검 | [[최저가와 쿠폰]] 확인일·만료 행 정리 |
 
-프로젝트 공통이면 `생활위키/.cursor/skills/` 에 두고 Git으로 공유할 수 있다.  
+프로젝트 공통이면 `생활위키/.cursor/skills/` 에 두고 Git으로 공유할 수 있다. 
 비밀·AdSense 키 등은 스킬에 **넣지 말 것**.
 
 ---
@@ -161,18 +161,18 @@ description: >
 
 ## 9. 실전 체크
 
-- [ ] 위치가 `skills` / `.cursor/skills` 인가 (`skills-cursor` 아님)  
-- [ ] `name` · `description`(WHAT+WHEN, 3인칭)  
-- [ ] 본문 짧고 절차·예시가 있는가  
-- [ ] 규칙과 역할이 겹치면 나눴는가  
-- [ ] 에이전트 기본 UI는 [[Cursor 사용법]]  
+- [ ] 위치가 `skills` / `.cursor/skills` 인가 (`skills-cursor` 아님) 
+- [ ] `name` · `description`(WHAT+WHEN, 3인칭) 
+- [ ] 본문 짧고 절차·예시가 있는가 
+- [ ] 규칙과 역할이 겹치면 나눴는가 
+- [ ] 에이전트 기본 UI는 [[Cursor 사용법]] 
 
 ---
 
 ## 10. 정리
 
-Cursor 스킬은 **`SKILL.md`로 에이전트에게 특수 절차를 심는 설정**이다.  
-개인·프로젝트 폴더에 두고, 설명문과 짧은 체크리스트가 품질을 가른다.  
+Cursor 스킬은 **`SKILL.md`로 에이전트에게 특수 절차를 심는 설정**이다. 
+개인·프로젝트 폴더에 두고, 설명문과 짧은 체크리스트가 품질을 가른다. 
 일상 편집은 [[Cursor 사용법]], 상시 제약은 규칙을 쓴다.
 
 ---

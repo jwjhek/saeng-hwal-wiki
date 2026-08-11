@@ -1,6 +1,7 @@
 ---
 publish: true
 draft: false
+depth: hub
 ---
 
 # 저사양 PC용 무료 OS
