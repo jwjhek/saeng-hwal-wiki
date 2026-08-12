@@ -7,10 +7,10 @@ draft: false
 
 > **분류:** 개발 › 인프라 · [[생활위키 목차]]
 
-**Git**은 파일 변경을 **커밋(스냅샷)** 으로 쌓아 두는 **분산 버전 관리** 도구다.  
+**Git**은 파일 변경을 **커밋(스냅샷)** 으로 쌓아 두는 **분산 버전 관리** 도구다. 
 로컬만으로도 동작하고, 원격 저장소는 [[GitHub]]·[[GitLab]] 등이 맡는다.
 
-공식: [https://git-scm.com](https://git-scm.com)  
+공식: [https://git-scm.com](https://git-scm.com) 
 문서: [https://git-scm.com/doc](https://git-scm.com/doc)
 
 확인일: 2026-08-07
@@ -19,9 +19,9 @@ draft: false
 
 ---
 
-## 1. 한눈에
+## 1. 개요
 
-| 항목 | 감각 |
+| 항목 | 설명 |
 |------|------|
 | 하는 일 | “언제 무엇이 바뀌었는지”를 커밋으로 기록·되돌리기·협업 |
 | 로컬 | PC의 `.git` 폴더가 저장소 |
@@ -30,11 +30,11 @@ draft: false
 
 ```text
 작업 폴더 (수정)
-    ↓ git add
+ ↓ git add
 스테이징 (올릴 조각)
-    ↓ git commit
+ ↓ git commit
 로컬 이력
-    ↓ git push
+ ↓ git push
 원격 ([[GitHub]] / [[GitLab]])
 ```
 
@@ -42,11 +42,12 @@ draft: false
 
 ## 2. 설치 · 최초 설정
 
-| OS | 감각 |
+| OS | 설명 |
 |----|------|
 | Windows | [git-scm.com](https://git-scm.com) 설치. Git Bash·자격 증명 관리자 포함되는 경우가 많음 |
 | macOS | Xcode CLT 또는 공식 설치 |
 | Linux | 배포판 패키지 (`git`) |
+| Android | [[Termux]] — `pkg install git` |
 
 ```powershell
 git config --global user.name "이름"
@@ -55,14 +56,14 @@ git config --global init.defaultBranch main
 git --version
 ```
 
-이메일은 [[GitHub]]/[[GitLab]] 계정과 맞추면 커밋 작성자 연결이 쉽다.  
+이메일은 [[GitHub]]/[[GitLab]] 계정과 맞추면 커밋 작성자 연결이 쉽다. 
 `--global`은 사용자 전체, 저장소만이면 그 폴더에서 `--global` 없이.
 
 ---
 
 ## 3. 핵심 용어
 
-| 말 | 감각 |
+| 말 | 설명 |
 |----|------|
 | 저장소(repo) | `.git`이 있는 프로젝트 |
 | 커밋 | 시점 스냅샷 + 메시지 |
@@ -109,7 +110,7 @@ git add .
 git commit -m "변경 이유를 짧게"
 ```
 
-메시지를 “뭐가 바뀌었나”보다 **왜**에 가깝게 쓰면 이력이 읽기 쉽다.  
+메시지를 “뭐가 바뀌었나”보다 **왜**에 가깝게 쓰면 이력이 읽기 쉽다. 
 에디터 UI: [[VS Code 사용법]] §8.
 
 ### 원격과 동기
@@ -138,7 +139,7 @@ git merge feature/로그인
 
 ## 5. 되돌리기 (조심해서)
 
-| 상황 | 자주 쓰는 감각 | 주의 |
+| 상황 | 자주 쓰는 것 | 주의 |
 |------|----------------|------|
 | 아직 add 전 수정 버리기 | `git restore 파일` | 내용 사라짐 |
 | add 취소 | `git restore --staged 파일` | 작업 내용은 남음 |
@@ -165,8 +166,8 @@ private/
 .DS_Store
 ```
 
-한 번 커밋된 비밀은 **이력에 남을 수 있다.** 유출 시 키 교체·이력 정리(고급)·호스팅 지원을 본다.  
-이 위키의 `private/`·`publish: false` 감각은 vault 규칙과 맞춘다.
+한 번 커밋된 비밀은 **이력에 남을 수 있다.** 유출 시 키 교체·이력 정리(고급)·호스팅 지원을 본다. 
+이 위키의 `private/`·`publish: false` 규칙은 vault와 맞춘다.
 
 ---
 
@@ -180,9 +181,9 @@ private/
 >>>>>> branch
 ```
 
-1. 파일을 열어 올바른 내용으로 합친다  
-2. `git add`  
-3. merge면 `git commit`, rebase면 `git rebase --continue`  
+1. 파일을 열어 올바른 내용으로 합친다 
+2. `git add` 
+3. merge면 `git commit`, rebase면 `git rebase --continue` 
 
 폴더 단위 비교는 [[WinMerge 사용법]]도 보조로 쓴다.
 
@@ -204,26 +205,26 @@ private/
 
 ## 9. 실전 체크
 
-- [ ] `user.name` / `user.email` 설정  
-- [ ] `.gitignore`에 비밀·빌드 산출물  
-- [ ] 커밋 전 `status`·`diff`  
-- [ ] `main`에 직접 강제 push하지 않음 (팀 규칙)  
-- [ ] 원격은 [[GitHub]] 또는 [[GitLab]] 중 어디에 둘지 정함  
+- [ ] `user.name` / `user.email` 설정 
+- [ ] `.gitignore`에 비밀·빌드 산출물 
+- [ ] 커밋 전 `status`·`diff` 
+- [ ] `main`에 직접 강제 push하지 않음 (팀 규칙) 
+- [ ] 원격은 [[GitHub]] 또는 [[GitLab]] 중 어디에 둘지 정함 
 
 ---
 
 ## 10. 정리
 
-Git은 **로컬 커밋 이력**이 본체이고, [[GitHub]]·[[GitLab]]은 그걸 **공유·리뷰·CI**하는 원격이다.  
+Git은 **로컬 커밋 이력**이 본체이고, [[GitHub]]·[[GitLab]]은 그걸 **공유·리뷰·CI**하는 원격이다. 
 매일은 `status` → `add` → `commit` → `push`/`pull`이면 대부분 충분하다.
 
 ---
 
 ## 면책
 
-> **면책**  
-> 학습용 감각이다. 회사 브랜치·권한·훅 규칙은 **팀 문서**가 우선.  
-> `push --force`·이력 재작성은 **공유 브랜치에서 위험**하다.  
+> **면책** 
+> 학습용이다. 회사 브랜치·권한·훅 규칙은 **팀 문서**가 우선. 
+> `push --force`·이력 재작성은 **공유 브랜치에서 위험**하다. 
 > 비밀(.env, 키, 비밀번호)을 커밋하지 않는다.
 
 ---

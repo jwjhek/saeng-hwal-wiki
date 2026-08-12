@@ -7,18 +7,18 @@ draft: false
 
 > **분류:** 개발 › 인프라 · [[생활위키 목차]]
 
-Docker는 앱과 실행에 필요한 환경(라이브러리·설정)을 **이미지**로 묶고, **컨테이너**로 동일하게 돌리게 해 주는 도구다.  
+Docker는 앱과 실행에 필요한 환경(라이브러리·설정)을 **이미지**로 묶고, **컨테이너**로 동일하게 돌리게 해 주는 도구다. 
 “내 PC에선 되는데 서버에선 안 돼”를 줄이는 게 핵심이다.
 
-공식: [https://www.docker.com](https://www.docker.com)  
+공식: [https://www.docker.com](https://www.docker.com) 
 문서: [https://docs.docker.com](https://docs.docker.com)
 
-확인일: 2026-08-06  
+확인일: 2026-08-06 
 Windows에서는 보통 **Docker Desktop** + (권장) **WSL2** 백엔드.
 
 ---
 
-## 1. 왜 쓰나
+## 1. 쓰는 이유
 
 | 문제 | Docker로 |
 |------|----------|
@@ -27,11 +27,11 @@ Windows에서는 보통 **Docker Desktop** + (권장) **WSL2** 백엔드.
 | 배포 환경 재현 | 이미지 태그를 서버에 그대로 |
 | 마이크로서비스 여러 개 | 네트워크로 컨테이너 연결 |
 
-가상머신(VM)과의 감각:
+가상머신(VM)과 비교:
 
 ```text
-VM        = 하드웨어 가상화 + 게스트 OS 통째
-컨테이너  = 호스트 커널 공유 + 프로세스 격리 (더 가볍고 빠름)
+VM = 하드웨어 가상화 + 게스트 OS 통째
+컨테이너 = 호스트 커널 공유 + 프로세스 격리 (더 가볍고 빠름)
 ```
 
 ---
@@ -51,16 +51,16 @@ VM        = 하드웨어 가상화 + 게스트 OS 통째
 
 ```text
 Dockerfile → docker build → Image → docker run → Container
-                              ↑
-                         docker pull (레지스트리)
+ ↑
+ docker pull (레지스트리)
 ```
 
 ---
 
 ## 3. 설치 (Windows)
 
-1. [Docker Desktop](https://www.docker.com/products/docker-desktop/) 설치  
-2. **WSL2** 엔진 사용 권장 (설정에서 확인)  
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop/) 설치 
+2. **WSL2** 엔진 사용 권장 (설정에서 확인) 
 3. 설치 후 터미널:
 
 ```powershell
@@ -68,7 +68,7 @@ docker version
 docker run hello-world
 ```
 
-요구: 가상화(BIOS), WSL2, 충분한 RAM.  
+요구: 가상화(BIOS), WSL2, 충분한 RAM. 
 회사 PC는 라이선스·보안 정책을 확인한다.
 
 Linux/macOS는 네이티브 또는 Desktop. 명령은 대체로 같다.
@@ -80,10 +80,10 @@ Linux/macOS는 네이티브 또는 Desktop. 명령은 대체로 같다.
 ### 이미지
 
 ```bash
-docker pull nginx:alpine          # 받기
-docker images                     # 목록 (또는 docker image ls)
-docker rmi nginx:alpine           # 삭제
-docker build -t myapp:1.0 .       # Dockerfile로 빌드
+docker pull nginx:alpine # 받기
+docker images # 목록 (또는 docker image ls)
+docker rmi nginx:alpine # 삭제
+docker build -t myapp:1.0 . # Dockerfile로 빌드
 ```
 
 ### 컨테이너
@@ -92,21 +92,21 @@ docker build -t myapp:1.0 .       # Dockerfile로 빌드
 docker run -d --name web -p 8080:80 nginx:alpine
 # -d 백그라운드, -p 호스트:컨테이너 포트, --name 이름
 
-docker ps                         # 실행 중
-docker ps -a                      # 중지 포함
-docker logs -f web                # 로그
-docker exec -it web sh            # 컨테이너 안 셸 (bash 없으면 sh)
+docker ps # 실행 중
+docker ps -a # 중지 포함
+docker logs -f web # 로그
+docker exec -it web sh # 컨테이너 안 셸 (bash 없으면 sh)
 docker stop web
 docker start web
-docker rm web                     # 삭제 (중지 후)
-docker rm -f web                  # 강제
+docker rm web # 삭제 (중지 후)
+docker rm -f web # 강제
 ```
 
 ### 정리
 
 ```bash
-docker system df                  # 용량
-docker system prune               # 안 쓰는 것 정리 (주의)
+docker system df # 용량
+docker system prune # 안 쓰는 것 정리 (주의)
 docker volume prune
 ```
 
@@ -146,12 +146,12 @@ docker run --rm -p 8000:8000 myapi:1.0
 
 ### 잘 쓰는 습관
 
-1. **작은 베이스** (`-slim`, `-alpine`) — 단, alpine은 libc 이슈 있을 수 있음  
-2. **레이어 캐시**: 자주 안 바뀌는 `requirements.txt`를 코드보다 먼저 COPY  
-3. **`.dockerignore`**: `.git`, `.venv`, `__pycache__`, `node_modules`  
-4. **root 비권장**: 가능하면 비root USER  
-5. **시크릿을 이미지에 넣지 말 것** — 빌드 인자·레이어에 남음  
-6. 멀티 스테이지 빌드: 빌드 도구와 런타임을 분리해 최종 이미지 축소  
+1. **작은 베이스** (`-slim`, `-alpine`) — 단, alpine은 libc 이슈 있을 수 있음 
+2. **레이어 캐시**: 자주 안 바뀌는 `requirements.txt`를 코드보다 먼저 COPY 
+3. **`.dockerignore`**: `.git`, `.venv`, `__pycache__`, `node_modules` 
+4. **root 비권장**: 가능하면 비root USER 
+5. **시크릿을 이미지에 넣지 말 것** — 빌드 인자·레이어에 남음 
+6. 멀티 스테이지 빌드: 빌드 도구와 런타임을 분리해 최종 이미지 축소 
 
 ```dockerfile
 FROM golang:1.22 AS build
@@ -187,9 +187,9 @@ docker run -e POSTGRES_PASSWORD=secret postgres:16
 ```bash
 docker volume create pgdata
 docker run -d --name pg \
-  -e POSTGRES_PASSWORD=secret \
-  -v pgdata:/var/lib/postgresql/data \
-  postgres:16
+ -e POSTGRES_PASSWORD=secret \
+ -v pgdata:/var/lib/postgresql/data \
+ postgres:16
 ```
 
 바인드 마운트 (호스트 폴더):
@@ -210,42 +210,42 @@ Windows 경로·권한은 WSL 쪽 프로젝트 경로(`\\wsl$\...` / WSL 터미�
 
 ```yaml
 services:
-  db:
-    image: postgres:16-alpine
-    environment:
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: app
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+ db:
+ image: postgres:16-alpine
+ environment:
+ POSTGRES_PASSWORD: secret
+ POSTGRES_DB: app
+ volumes:
+ - pgdata:/var/lib/postgresql/data
+ ports:
+ - "5432:5432"
 
-  api:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      DATABASE_URL: postgres://postgres:secret@db:5432/app
-    depends_on:
-      - db
+ api:
+ build: .
+ ports:
+ - "8000:8000"
+ environment:
+ DATABASE_URL: postgres://postgres:secret@db:5432/app
+ depends_on:
+ - db
 
 volumes:
-  pgdata:
+ pgdata:
 ```
 
 ```bash
-docker compose up -d          # 빌드+백그라운드
+docker compose up -d # 빌드+백그라운드
 docker compose ps
 docker compose logs -f api
-docker compose down           # 중지·네트워크 제거
-docker compose down -v        # 볼륨까지 삭제 (데이터 삭제 주의)
+docker compose down # 중지·네트워크 제거
+docker compose down -v # 볼륨까지 삭제 (데이터 삭제 주의)
 ```
 
 같은 Compose 네트워크 안에서는 서비스 이름(`db`)이 호스트명이 된다.
 
 ---
 
-## 8. 네트워크 감각
+## 8. 네트워크
 
 ```bash
 docker network ls
@@ -254,7 +254,7 @@ docker run -d --name redis --network appnet redis:alpine
 docker run -it --network appnet nicolaka/netshoot ping redis
 ```
 
-Compose는 프로젝트용 네트워크를 자동 생성한다.  
+Compose는 프로젝트용 네트워크를 자동 생성한다. 
 `localhost`는 **컨테이너 자신**이다. 호스트의 DB에 붙을 때는 `host.docker.internal`(Desktop) 등을 쓴다.
 
 ---
@@ -301,13 +301,13 @@ CI에서 빌드·스캔(Trivy 등)·푸시가 일반적이다.
 
 ## 11. 보안·운영 체크
 
-1. **latest 태그 의존 말기** — 재현 가능한 버전 핀  
-2. 이미지·의존성 **CVE 스캔**  
-3. 컨테이너에 SSH·불필요 포트를 열지 않기  
-4. 시크릿은 환경변수·비밀 관리자 (이미지·git 금지)  
-5. 읽기 전용 루트 파일시스템, drop capabilities (심화)  
-6. 로그는 stdout → 수집 스택으로  
-7. 헬스체크: `HEALTHCHECK` 또는 Compose `healthcheck`  
+1. **latest 태그 의존 말기** — 재현 가능한 버전 핀 
+2. 이미지·의존성 **CVE 스캔** 
+3. 컨테이너에 SSH·불필요 포트를 열지 않기 
+4. 시크릿은 환경변수·비밀 관리자 (이미지·git 금지) 
+5. 읽기 전용 루트 파일시스템, drop capabilities (심화) 
+6. 로그는 stdout → 수집 스택으로 
+7. 헬스체크: `HEALTHCHECK` 또는 Compose `healthcheck` 
 8. 프로덕션 오케스트레이션은 **Kubernetes / Swarm / Nomad** 등으로 넘어가는 경우가 많음 (Docker는 빌드·런타임 단위) → [[쿠버네티스]]
 
 ---
@@ -339,20 +339,20 @@ docker system prune
 ```
 
 ```dockerfile
-FROM …          WORKDIR …     COPY …     RUN …
-ENV …           EXPOSE …      USER …     CMD …
+FROM … WORKDIR … COPY … RUN …
+ENV … EXPOSE … USER … CMD …
 ```
 
 ---
 
 ## 14. 학습 순서
 
-1. `hello-world`, `nginx` run · 포트 매핑  
-2. `exec`로 들어가 보기 · logs  
-3. Dockerfile로 자기 앱 이미지화  
-4. Compose로 앱+DB  
-5. 볼륨·네트워크·`.dockerignore`  
-6. (다음) 멀티 스테이지, CI 푸시, [[쿠버네티스]] 입문  
+1. `hello-world`, `nginx` run · 포트 매핑 
+2. `exec`로 들어가 보기 · logs 
+3. Dockerfile로 자기 앱 이미지화 
+4. Compose로 앱+DB 
+5. 볼륨·네트워크·`.dockerignore` 
+6. (다음) 멀티 스테이지, CI 푸시, [[쿠버네티스]] 입문 
 
 ---
 

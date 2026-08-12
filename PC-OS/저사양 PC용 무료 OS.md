@@ -14,7 +14,7 @@ depth: hub
 
 확인일: 2026-08-07
 
-상세: [[ChromeOS Flex]] · [[Linux Mint]] · [[Ubuntu]] · (바탕) [[윈도우 사용법]]
+상세: [[ChromeOS Flex]] · [[Linux Mint]] · [[Ubuntu]] · [[리눅스]] · [[리눅스 기본 명령어]] · (바탕) [[윈도우 사용법]]
 
 ---
 

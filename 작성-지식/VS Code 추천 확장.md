@@ -7,20 +7,20 @@ draft: false
 
 > **분류:** 작성·지식 › 에디터·IDE · [[생활위키 목차]]
 
-기본 조작은 [[VS Code 사용법]]. 여기서는 **실제로 깔아 볼 만한 확장**만 용도별로 정리한다.  
+기본 조작은 [[VS Code 사용법]]. 여기서는 **실제로 깔아 볼 만한 확장**만 용도별로 정리한다. 
 마켓플레이스에서 이름·게시자(Publisher)로 검색한다. (`Ctrl` + `Shift` + `X`)
 
-확인일: 2026-08-06  
+확인일: 2026-08-06 
 확장 ID·인기는 바뀔 수 있다. **공식·최근 업데이트·별점**을 본다.
 
 ---
 
 ## 0. 고르는 원칙
 
-1. **필요한 언어·작업만** — 팩을 잔뜩 깔면 시작·검색이 느려진다.  
-2. Microsoft / 언어 공식 확장을 우선.  
-3. 같은 역할 확장은 **하나**만 (포맷터·테마 중복 주의).  
-4. 느리면 확장 절반 disable → 이분 탐색.  
+1. **필요한 언어·작업만** — 팩을 잔뜩 깔면 시작·검색이 느려진다. 
+2. Microsoft / 언어 공식 확장을 우선. 
+3. 같은 역할 확장은 **하나**만 (포맷터·테마 중복 주의). 
+4. 느리면 확장 절반 disable → 이분 탐색. 
 5. Cursor를 쓰면 AI 확장은 겹칠 수 있다 → [[Cursor 사용법]].
 
 설치 후 Settings Sync를 켜 두면 PC 간 목록이 맞는다.
@@ -58,8 +58,8 @@ GitLens는 무료 범위만으로도 충분하다. 유료 기능은 무시해도
 
 ```json
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+ "editor.formatOnSave": true,
+ "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 
@@ -78,7 +78,7 @@ GitLens는 무료 범위만으로도 충분하다. 유료 기능은 무시해도
 | **Gradle for Java** | Gradle 빌드 (팩에 포함되는 경우 많음) |
 | **Community Server Connectors** / Tomcat 관련 | 내장 톰캣 배포 시 (필요하면) |
 
-공공·이클립스 비중이 크면 IDE는 [[Eclipse 사용법]]도 병행. VS Code는 가벼운 편집·리뷰용으로 쓰는 팀이 많다.  
+공공·이클립스 비중이 크면 IDE는 [[Eclipse 사용법]]도 병행. VS Code는 가벼운 편집·리뷰용으로 쓰는 팀이 많다. 
 학습: [[Java 언어 학습]], [[Spring과 Spring Boot 학습]], [[전자정부프레임워크]]
 
 ### Python
@@ -145,11 +145,11 @@ Oracle 튜닝 개념은 [[Oracle DB와 튜닝]]. 확장은 “접속 도구”�
 | 확장 | 용도 |
 |------|------|
 | **Markdown All in One** | 목차·단축키·목록 편집 |
-| **markdownlint** | MD 스타일·깨진 링크 감각 |
+| **markdownlint** | MD 스타일·깨진 링크 |
 | **Markdown Preview Enhanced** | 미리보기 강화 (무거우면 All in One만) |
 | **Paste Image** | 클립보드 이미지를 폴더에 저장·링크 |
 
-Obsidian vault를 열 때: 편집은 VS Code, `[[위키링크]]`·그래프는 [[Obsidian 사용법]]이 유리하다.  
+Obsidian vault를 열 때: 편집은 VS Code, `[[위키링크]]`·그래프는 [[Obsidian 사용법]]이 유리하다. 
 공개 여부는 vault 루트 `공개 규칙.md`(사이트 비공개).
 
 ---
@@ -163,7 +163,7 @@ Obsidian vault를 열 때: 편집은 VS Code, `[[위키링크]]`·그래프는 [
 | **Peacock** | 창/워크스페이스마다 테두리 색 (여러 창 구분) |
 | **Project Manager** | 최근 프로젝트 즐겨찾기 |
 | **Partial Diff** / 내장 diff | 선택 영역 비교 — 폴더 전체는 [[WinMerge 사용법]] |
-| **REST Client** 또는 **Thunder Client** | `.http`로 API 호출 (Postman 대체 감각) |
+| **REST Client** 또는 **Thunder Client** | `.http`로 API 호출 (Postman 대체) |
 | **Draw.io Integration** | 다이어그램 (선택) |
 
 테마·아이콘은 취향이라 **추천이 곧 정답은 아니다**.
@@ -188,16 +188,16 @@ AI 코딩은 **§10 Copilot · §11 Continue**. Cursor와 구독·단축키가 �
 
 일상·위키 + 가벼운 개발만 한다면:
 
-1. Korean Language Pack  
-2. GitLens  
-3. Error Lens  
-4. Markdown All in One  
-5. (Python이면) Python + Pylance  
-6. (Java면) Extension Pack for Java  
-7. (C/C++이면) C/C++ Extension Pack — §12  
-8. (AI면) Copilot **또는** Continue 중 하나 — §10·§11  
-9. (컨테이너면) Docker + YAML  
-10. Prettier 또는 언어 공식 포맷터  
+1. Korean Language Pack 
+2. GitLens 
+3. Error Lens 
+4. Markdown All in One 
+5. (Python이면) Python + Pylance 
+6. (Java면) Extension Pack for Java 
+7. (C/C++이면) C/C++ Extension Pack — §12 
+8. (AI면) Copilot **또는** Continue 중 하나 — §10·§11 
+9. (컨테이너면) Docker + YAML 
+10. Prettier 또는 언어 공식 포맷터 
 
 이후 필요할 때만 추가.
 
@@ -212,17 +212,17 @@ AI 코딩은 **§10 Copilot · §11 Continue**. Cursor와 구독·단축키가 �
 
 명령 팔레트:
 
-- `Extensions: Show Recommended Extensions` — 워크스페이스 추천  
+- `Extensions: Show Recommended Extensions` — 워크스페이스 추천 
 - 팀 공유: `.vscode/extensions.json`의 `recommendations`
 
 ```json
 {
-  "recommendations": [
-    "ms-vscode.cpptools",
-    "ms-vscode.cmake-tools",
-    "GitHub.copilot",
-    "Continue.continue"
-  ]
+ "recommendations": [
+ "ms-vscode.cpptools",
+ "ms-vscode.cmake-tools",
+ "GitHub.copilot",
+ "Continue.continue"
+ ]
 }
 ```
 
@@ -231,6 +231,8 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 ---
 
 ## 10. GitHub Copilot
+
+전용 정리: [[GitHub Copilot]] (Microsoft Copilot과 구분).
 
 게시자: **GitHub**. 대표 확장:
 
@@ -249,7 +251,7 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 
 ### 기본 조작 (Windows, 바뀔 수 있음)
 
-| 동작 | 감각 |
+| 동작 | 설명 |
 |------|------|
 | 제안 수락 | `Tab` |
 | 제안 거부 | `Esc` |
@@ -261,11 +263,11 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 
 ### 설정·습관
 
-1. GitHub 계정으로 로그인·구독 활성화  
-2. 회사 코드는 **조직 Copilot 정책·허용 저장소** 확인  
-3. 제안은 **읽고 수락** — 컴파일·테스트 전제  
-4. 시크릿·API 키·개인정보를 프롬프트/파일에 두지 않기  
-5. [[Cursor 사용법]]과 **동시 사용 시** 완성 팝업이 이중으로 뜨면 한쪽 disable  
+1. GitHub 계정으로 로그인·구독 활성화 
+2. 회사 코드는 **조직 Copilot 정책·허용 저장소** 확인 
+3. 제안은 **읽고 수락** — 컴파일·테스트 전제 
+4. 시크릿·API 키·개인정보를 프롬프트/파일에 두지 않기 
+5. [[Cursor 사용법]]과 **동시 사용 시** 완성 팝업이 이중으로 뜨면 한쪽 disable 
 
 ### VS Code vs Cursor
 
@@ -281,7 +283,7 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 
 ## 11. Continue
 
-게시자·검색: **Continue** (`Continue.continue`).  
+게시자·검색: **Continue** (`Continue.continue`). 
 오픈소스에 가까운 **자체 모델 연결형** AI 코딩 확장이다. Copilot처럼 “GitHub 고정 모델”이 아니라, **로컬·API 키로 모델/제공자를 고르는** 쪽이 핵심이다.
 
 문서: [https://continue.dev](https://continue.dev)
@@ -295,31 +297,31 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 | 데이터 | 키·프록시·로컬에 따라 통제 여지 | GitHub/정책 범위 |
 | UX | 사이드바 채팅·인라인 편집·컨텍스트 @ | 인라인 완성 + Chat |
 
-“회사 코드를 외부 구독 AI에 덜 보내고, 로컬 모델을 쓰고 싶다” → Continue 검토.  
+“회사 코드를 외부 구독 AI에 덜 보내고, 로컬 모델을 쓰고 싶다” → Continue 검토. 
 “설치 후 바로 완성 품질만” → Copilot이 단순할 때가 많다.
 
-### 설치·첫 설정 감각
+### 설치·첫 설정
 
-1. 확장 `Continue` 설치  
-2. 사이드바 Continue 아이콘 → 모델/제공자 설정  
-3. API 키는 **User secrets·Continue 설정**에만 (Git 커밋 금지)  
-4. 로컬이면 Ollama 등 실행 후 모델명 연결  
+1. 확장 `Continue` 설치 
+2. 사이드바 Continue 아이콘 → 모델/제공자 설정 
+3. API 키는 **User secrets·Continue 설정**에만 (Git 커밋 금지) 
+4. 로컬이면 Ollama 등 실행 후 모델명 연결 
 
 설정 파일 위치는 버전마다 `~/.continue/config.json`(또는 yaml) 형태가 흔하다. UI 마법사가 있으면 그걸 우선.
 
 ### 쓰는 흐름
 
-- **채팅**: 코드 설명, 리팩터 제안, 에러 해석  
-- **Edit / 인라인**: 선택 영역을 지시문으로 수정  
-- **@파일·@폴더**: 컨텍스트로 코드 첨부 ( Continu 쪽 `@` 문법 — UI 힌트 따름 )  
+- **채팅**: 코드 설명, 리팩터 제안, 에러 해석 
+- **Edit / 인라인**: 선택 영역을 지시문으로 수정 
+- **@파일·@폴더**: 컨텍스트로 코드 첨부 (Continu 쪽 `@` 문법 — UI 힌트 따름) 
 - 탭 완성 계열이 있으면 Copilot과 **동시에 켜지 말 것**
 
 ### 주의
 
-1. API 키 유출·프롬프트에 시크릿 포함 금지  
-2. 로컬 모델은 **품질·속도·VRAM** 편차가 큼  
-3. 에이전트가 파일을 직접 고치면 diff를 반드시 리뷰  
-4. 팀 표준이 Copilot이면 Continue는 개인 프로필에서만  
+1. API 키 유출·프롬프트에 시크릿 포함 금지 
+2. 로컬 모델은 **품질·속도·VRAM** 편차가 큼 
+3. 에이전트가 파일을 직접 고치면 diff를 반드시 리뷰 
+4. 팀 표준이 Copilot이면 Continue는 개인 프로필에서만 
 
 ---
 
@@ -347,27 +349,27 @@ C/C++ 개발의 기본 축은 Microsoft **C/C++** 확장이다.
 
 확장만으로는 **컴파일러가 없다**. 예:
 
-- **MSVC** — Visual Studio Build Tools  
-- **MinGW-w64** / MSYS2  
-- **WSL** 안 `gcc`/`clang` + [[윈도우 사용법]]·Remote WSL  
+- **MSVC** — Visual Studio Build Tools 
+- **MinGW-w64** / MSYS2 
+- **WSL** 안 `gcc`/`clang` + [[윈도우 사용법]]·Remote WSL 
 
 명령 팔레트: `C/C++: Edit Configurations (UI)` 또는 `c_cpp_properties.json`으로 includePath·compilerPath 지정.
 
-`.vscode/c_cpp_properties.json` 감각:
+`.vscode/c_cpp_properties.json` 예:
 
 ```json
 {
-  "configurations": [
-    {
-      "name": "Win32",
-      "compilerPath": "C:/mingw64/bin/g++.exe",
-      "intelliSenseMode": "windows-gcc-x64",
-      "cStandard": "c17",
-      "cppStandard": "c++17",
-      "includePath": ["${workspaceFolder}/**"]
-    }
-  ],
-  "version": 4
+ "configurations": [
+ {
+ "name": "Win32",
+ "compilerPath": "C:/mingw64/bin/g++.exe",
+ "intelliSenseMode": "windows-gcc-x64",
+ "cStandard": "c17",
+ "cppStandard": "c++17",
+ "includePath": ["${workspaceFolder}/**"]
+ }
+ ],
+ "version": 4
 }
 ```
 
@@ -375,30 +377,30 @@ C/C++ 개발의 기본 축은 Microsoft **C/C++** 확장이다.
 
 ### 빌드·실행
 
-- 단순: `tasks.json`으로 `gcc main.c -o main` 후 실행  
-- CMake: CMake Tools로 Configure → Build → Debug  
+- 단순: `tasks.json`으로 `gcc main.c -o main` 후 실행 
+- CMake: CMake Tools로 Configure → Build → Debug 
 - F5 디버그: `launch.json`에서 `cppdbg` 또는 `cppvsdbg`(MSVC)
 
 ### IntelliSense가 이상할 때
 
-1. `compilerPath`가 실제 컴파일러를 가리키는지  
-2. 헤더 includePath (라이브러리·서브모듈)  
-3. 명령 팔레트 `C/C++: Reset IntelliSense Database`  
-4. 대형 모노레포는 파일 제외·제한  
+1. `compilerPath`가 실제 컴파일러를 가리키는지 
+2. 헤더 includePath (라이브러리·서브모듈) 
+3. 명령 팔레트 `C/C++: Reset IntelliSense Database` 
+4. 대형 모노레포는 파일 제외·제한 
 
 ### 디버그
 
-브레이크포인트 → F5.  
+브레이크포인트 → F5. 
 Watch·Call Stack·메모리(주소)는 포인터 학습([[C언어와 포인터]])과 함께 보면 이해가 빠르다.
 
 ### 추천 조합
 
 ```text
 C/C++ Extension Pack
-  + (CMake면) CMake Tools 확인
-  + Error Lens
-  + (선택) GitLens
-  + (선택) Copilot 또는 Continue — 완성은 AI, 빨간 줄·디버그는 cpptools
+ + (CMake면) CMake Tools 확인
+ + Error Lens
+ + (선택) GitLens
+ + (선택) Copilot 또는 Continue — 완성은 AI, 빨간 줄·디버그는 cpptools
 ```
 
 ---

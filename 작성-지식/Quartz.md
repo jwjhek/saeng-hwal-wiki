@@ -256,5 +256,6 @@ Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://git
 - [[Cursor 사용법]]
 - [[GitHub]]
 - [[Git 사용법]]
+- [[Google AdSense]]
 - [[Notion 사용법]]
 - [[VS Code 사용법]]

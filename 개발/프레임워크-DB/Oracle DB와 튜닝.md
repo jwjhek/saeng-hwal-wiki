@@ -7,12 +7,12 @@ draft: false
 
 > **분류:** 개발 › 프레임워크·DB · [[생활위키 목차]]
 
-Oracle Database의 기본 구조와, 느려졌을 때 **근거 있게** 튜닝하는 방법을 정리한다.  
+Oracle Database의 기본 구조와, 느려졌을 때 **근거 있게** 튜닝하는 방법을 정리한다. 
 버전은 19c / 21c / 23ai 등이 현장에 혼재한다. 메뉴·뷰 이름은 버전에 따라 조금 다를 수 있다.
 
 공식 문서: [Oracle Database Documentation](https://docs.oracle.com/en/database/oracle/oracle-database/)
 
-확인일: 2026-08-06  
+확인일: 2026-08-06 
 ※ 운영 DB 파라미터·인덱스 변경은 **변경 관리·백업·테스트** 후에. 이 글은 학습·점검용이다.
 
 ---
@@ -27,6 +27,7 @@ Oracle은 **관계형 DBMS**다. SQL로 데이터를 넣고·읽고·트랜잭�
 | Database | 디스크 위의 데이터파일·컨트롤파일·리두 등 물리 파일 집합 |
 | Tablespace | 논리 저장 공간. 테이블·인덱스가 여기에 들어감 |
 | Schema | 사용자 소유의 객체 묶음 (테이블, 뷰, 프로시저…) |
+| Synonym | 다른 스키마 객체 **별칭** — [[Oracle 시노님]] |
 | SID / Service | 접속 식별. 요즘은 서비스명 접속이 일반적 |
 | Listener | 클라이언트 접속을 받아 인스턴스로 넘김 |
 
@@ -52,21 +53,21 @@ sqlplus user/pass@//host:1521/ORCLPDB1
 | PGA | 세션·정렬·해시 조인 등 프로세스별 메모리 |
 | Redo Log Buffer | 변경 로그를 리두로 쓰기 전 버퍼 |
 
-`MEMORY_TARGET` / `SGA_TARGET` / `PGA_AGGREGATE_TARGET` 등으로 크기를 관리한다.  
+`MEMORY_TARGET` / `SGA_TARGET` / `PGA_AGGREGATE_TARGET` 등으로 크기를 관리한다. 
 **무작정 키우기 전에** AWR에서 어디가 병목인지 본다.
 
 ### 2.2 프로세스 (이름만)
 
-- DBWn: Dirty 버퍼를 데이터파일로  
-- LGWR: 리두를 로그 파일로 (커밋 성능과 직결)  
-- CKPT, SMON, PMON, ARCn 등  
+- DBWn: Dirty 버퍼를 데이터파일로 
+- LGWR: 리두를 로그 파일로 (커밋 성능과 직결) 
+- CKPT, SMON, PMON, ARCn 등 
 
 ### 2.3 읽기 경로
 
 ```text
 SQL → 파싱(공유 커서?) → 실행 계획 → Buffer Cache 조회
-                              ↓ miss
-                         디스크 물리 읽기
+ ↓ miss
+ 디스크 물리 읽기
 ```
 
 튜닝의 많은 부분은 **불필요한 논리/물리 읽기(Buffer Gets / Disk Reads) 줄이기**다.
@@ -116,10 +117,10 @@ SQL → 파싱(공유 커서?) → 실행 계획 → Buffer Cache 조회
 
 보는 포인트:
 
-- **DB Time / DB CPU** — 부하 크기  
-- **Top 5 Timed Events** — 뭐를 기다리거나 CPU를 쓰는지  
-- **Load Profile** — 초당 논리읽기, 물리읽기, 파스, 트랜잭션  
-- **Top SQL** — Elapsed, CPU, Gets, Reads, Executions 여러 축으로  
+- **DB Time / DB CPU** — 부하 크기 
+- **Top 5 Timed Events** — 뭐를 기다리거나 CPU를 쓰는지 
+- **Load Profile** — 초당 논리읽기, 물리읽기, 파스, 트랜잭션 
+- **Top SQL** — Elapsed, CPU, Gets, Reads, Executions 여러 축으로 
 - **PGA / SGA / Tablespace I/O**
 
 문제 시각의 스냅샷 구간과, 평소 같은 요일·시간 **베이스라인**을 비교하면 원인 감이 온다.
@@ -129,9 +130,9 @@ SQL → 파싱(공유 커서?) → 실행 계획 → Buffer Cache 조회
 ```sql
 -- 스냅샷 ID 확인 후
 SELECT * FROM TABLE(
-  DBMS_WORKLOAD_REPOSITORY.AWR_REPORT_HTML(
-    l_dbid, l_inst, start_snap, end_snap
-  )
+ DBMS_WORKLOAD_REPOSITORY.AWR_REPORT_HTML(
+ l_dbid, l_inst, start_snap, end_snap
+)
 );
 ```
 
@@ -144,10 +145,10 @@ Enterprise Manager에서도 클릭으로 생성 가능하다.
 ```sql
 -- 개념 예시: 최근 대기/SQL 분포 (환경에 맞게 수정)
 SELECT NVL(event, 'ON CPU') event, COUNT(*) samples
-FROM   v$active_session_history
-WHERE  sample_time > SYSDATE - (10/1440)
-GROUP  BY NVL(event, 'ON CPU')
-ORDER  BY samples DESC;
+FROM v$active_session_history
+WHERE sample_time > SYSDATE - (10/1440)
+GROUP BY NVL(event, 'ON CPU')
+ORDER BY samples DESC;
 ```
 
 ### 5.3 ADDM
@@ -158,8 +159,8 @@ AWR을 바탕으로 자동 진단·권고. 출발점으로 좋지만, **앱 설�
 
 특정 세션·SQL:
 
-- `DBMS_MONITOR` / SQL Trace + `tkprof`  
-- Real-Time SQL Monitoring (`V$SQL_MONITOR`, OEM) — 오래 도는 쿼리 시각화  
+- `DBMS_MONITOR` / SQL Trace + `tkprof` 
+- Real-Time SQL Monitoring (`V$SQL_MONITOR`, OEM) — 오래 도는 쿼리 시각화 
 
 ### 5.5 실행계획 보기
 
@@ -197,14 +198,14 @@ Wait만 보고 파라미터를 막 건드리지 말고, **그 wait를 유발한 
 
 ### 7.1 자주 있는 원인
 
-1. **통계 정보 오래됨 / 잘못됨** → 옵티마이저가 나쁜 플랜  
-2. **인덱스 부재·과다·잘못된 컬럼 순서**  
-3. **암시적 형변환** (`WHERE char_col = 123`) → 인덱스 비효율  
-4. **함수로 컬럼 감싸기** (`WHERE TRUNC(dt) = ...`)  
-5. **선택도 낮은 조건만으로 Full scan**  
-6. **NESTED LOOPS + 큰 드라이브** / 잘못된 조인 순서  
-7. **바인드 피킹**으로 가끔 플랜이 엇나감  
-8. **행마다 커밋**하는 배치  
+1. **통계 정보 오래됨 / 잘못됨** → 옵티마이저가 나쁜 플랜 
+2. **인덱스 부재·과다·잘못된 컬럼 순서** 
+3. **암시적 형변환** (`WHERE char_col = 123`) → 인덱스 비효율 
+4. **함수로 컬럼 감싸기** (`WHERE TRUNC(dt) = ...`) 
+5. **선택도 낮은 조건만으로 Full scan** 
+6. **NESTED LOOPS + 큰 드라이브** / 잘못된 조인 순서 
+7. **바인드 피킹**으로 가끔 플랜이 엇나감 
+8. **행마다 커밋**하는 배치 
 
 ### 7.2 인덱스
 
@@ -225,23 +226,24 @@ EXEC DBMS_STATS.GATHER_TABLE_STATS('HR', 'EMPLOYEES', cascade=>TRUE);
 -- 스키마/DB 단위 정책은 유지보수 윈도우에 맞춤
 ```
 
-- 대량 적재 직후 통계 미수집 → 플랜 붕괴 흔함  
-- 히스토그램·incremental stats는 대용량·파티션에서 중요  
-- `GATHER_STATS_JOB` / Auto stats 설정을 파악해 둘 것  
+- 대량 적재 직후 통계 미수집 → 플랜 붕괴 흔함 
+- 히스토그램·incremental stats는 대용량·파티션에서 중요 
+- `GATHER_STATS_JOB` / Auto stats 설정을 파악해 둘 것 
 
 ### 7.4 SQL 작성 습관
 
-- 리터럴 남발보다 **바인드 변수** (파스·공유 풀)  
-- `SELECT *` 지양, 필요한 컬럼만  
-- 존재 여부만 볼 때 불필요한 정렬·대량 fetch 줄이기  
-- 페이지네이션은 버전·패턴에 맞는 방식 (`FETCH FIRST`, 키셋 등)  
-- 뷰·인라인 뷰가 옵티마이저를 혼란시키면 단순화  
+- 리터럴 남발보다 **바인드 변수** (파스·공유 풀) 
+- `SELECT *` 지양, 필요한 컬럼만 
+- 존재 여부만 볼 때 불필요한 정렬·대량 fetch 줄이기 
+- 페이지네이션은 버전·패턴에 맞는 방식 (`FETCH FIRST`, 키셋 등) 
+- 뷰·인라인 뷰가 옵티마이저를 혼란시키면 단순화 
 
-### 7.5 SQL Tuning Advisor / SQL Profile / Baseline
+### 7.5 SQL Tuning Advisor / SQL Profile / Baseline / 힌트
 
-- **SQL Tuning Advisor**: 인덱스·통계·SQL Profile 권고  
-- **SQL Profile**: 옵티마이저에 보정 정보 (라이선스·검증 필요)  
-- **SQL Plan Baseline**: 검증된 플랜만 사용 → **업그레이드·통계 후 플랜 회귀 방지**에 강함  
+- **SQL Tuning Advisor**: 인덱스·통계·SQL Profile 권고 
+- **SQL Profile**: 옵티마이저에 보정 정보 (라이선스·검증 필요) 
+- **SQL Plan Baseline**: 검증된 플랜만 사용 → **업그레이드·통계 후 플랜 회귀 방지**에 강함 
+- **옵티마이저 힌트** (`/*+ ... */`): SQL 안에서 플랜을 **강하게** 유도 — **남용 금지**, 상세 [[Oracle 힌트]]
 
 23ai 계열에서는 Real-Time SQL Plan Management 등 자동 회귀 대응이 강화되는 추세다. 버전 문서를 확인한다.
 
@@ -263,10 +265,10 @@ SQL이 괜찮은데도 느리면:
 
 파라미터 예 (이름만 — 값 복붙 금지):
 
-- `SESSIONS`, `PROCESSES`  
-- `OPEN_CURSORS`  
-- `PARALLEL_*`  
-- `OPTIMIZER_FEATURES_ENABLE` (업그레이드 시 플랜 영향)  
+- `SESSIONS`, `PROCESSES` 
+- `OPEN_CURSORS` 
+- `PARALLEL_*` 
+- `OPTIMIZER_FEATURES_ENABLE` (업그레이드 시 플랜 영향) 
 
 **감으로 `*_CACHE`만 키우는 튜닝은 실패율이 높다.**
 
@@ -291,33 +293,33 @@ SQL이 괜찮은데도 느리면:
 
 문제 발생 시:
 
-1. [ ] 사용자·화면·시간대를 기록  
-2. [ ] 지금이면 ASH / SQL Monitor, 과거면 AWR  
-3. [ ] Top Timed Event가 CPU인지 I/O인지 락인지  
-4. [ ] Top SQL의 SQL_ID → 텍스트·플랜  
-5. [ ] `gets_per_exec`, `elapsed_per_exec`로 “한 번이 무거운지 / 너무 자주인지”  
-6. [ ] 통계 수집 시점·데이터 급증 여부  
-7. [ ] 최근 배포·인덱스·파라미터·업그레이드  
-8. [ ] 조치 후 AWR/실행시간으로 전후 비교  
+1. [ ] 사용자·화면·시간대를 기록 
+2. [ ] 지금이면 ASH / SQL Monitor, 과거면 AWR 
+3. [ ] Top Timed Event가 CPU인지 I/O인지 락인지 
+4. [ ] Top SQL의 SQL_ID → 텍스트·플랜 
+5. [ ] `gets_per_exec`, `elapsed_per_exec`로 “한 번이 무거운지 / 너무 자주인지” 
+6. [ ] 통계 수집 시점·데이터 급증 여부 
+7. [ ] 최근 배포·인덱스·파라미터·업그레이드 
+8. [ ] 조치 후 AWR/실행시간으로 전후 비교 
 
 평소 예방:
 
-1. [ ] 피크 시간 AWR 베이스라인 보관  
-2. [ ] 통계 정책·윈도우 문서화  
-3. [ ] 중요 SQL Plan Baseline  
-4. [ ] 배치 커밋·동시성 가이드를 개발 표준에  
-5. [ ] 용량·Temp·Redo 모니터링 알람  
+1. [ ] 피크 시간 AWR 베이스라인 보관 
+2. [ ] 통계 정책·윈도우 문서화 
+3. [ ] 중요 SQL Plan Baseline 
+4. [ ] 배치 커밋·동시성 가이드를 개발 표준에 
+5. [ ] 용량·Temp·Redo 모니터링 알람 
 
 ---
 
 ## 11. 하면 안 되는 것
 
-- 원인 SQL 없이 인덱스 난사  
-- 운영에서 검증 없는 힌트 남발 (`/*+ PARALLEL(256) */` 등)  
-- 통계를 잠그거나 fake로 방치  
-- 라이선스 없는 Diagnostic/Tuning Pack 기능 무단 사용  
-- 피크 시간에 대형 `GATHER` + 풀 스캔 분석  
-- “예전에 이렇게 해서 고쳤다”만 반복 (워크로드가 바뀜)  
+- 원인 SQL 없이 인덱스 난사 
+- 운영에서 검증 없는 힌트 남발 (`/*+ PARALLEL(256) */` 등) → [[Oracle 힌트]]
+- 통계를 잠그거나 fake로 방치 
+- 라이선스 없는 Diagnostic/Tuning Pack 기능 무단 사용 
+- 피크 시간에 대형 `GATHER` + 풀 스캔 분석 
+- “예전에 이렇게 해서 고쳤다”만 반복 (워크로드가 바뀜) 
 
 ---
 
@@ -338,13 +340,13 @@ SQL이 괜찮은데도 느리면:
 
 ## 13. 학습·다음 단계
 
-1. AWR 리포트 한 장을 Top Event → Top SQL 순으로 읽어 보기  
-2. 느린 SQL 하나에 `DISPLAY_CURSOR`로 플랜 해석  
-3. 개발 DB에서 통계·인덱스 전후 비교  
-4. 공식: *Database Performance Tuning Guide*, *SQL Tuning Guide*  
-5. 사내 표준(커밋, 스키마 변경, 힌트 금지 목록) 확인  
+1. AWR 리포트 한 장을 Top Event → Top SQL 순으로 읽어 보기 
+2. 느린 SQL 하나에 `DISPLAY_CURSOR`로 플랜 해석 
+3. 개발 DB에서 통계·인덱스 전후 비교 
+4. 공식: *Database Performance Tuning Guide*, *SQL Tuning Guide* 
+5. 사내 표준(커밋, 스키마 변경, 힌트 금지 목록) 확인 — 힌트·시노님: [[Oracle 힌트]] · [[Oracle 시노님]]
 
-로컬에서 SQL만 다듬을 때는 [[Notepad++ 사용법]], [[VS Code 사용법]], [[Cursor 사용법]]으로 스크립트를 관리하면 편하다.  
+로컬에서 SQL만 다듬을 때는 [[Notepad++ 사용법]], [[VS Code 사용법]], [[Cursor 사용법]]으로 스크립트를 관리하면 편하다. 
 긴 매뉴얼 PDF는 [[NotebookLM 사용법]]에 넣어 소화해도 좋다.
 
 ---
@@ -353,6 +355,8 @@ SQL이 괜찮은데도 느리면:
 
 - [[생활위키 목차]]
 - [[DBeaver 사용법]] — SQL 실행·스키마 탐색 GUI
+- [[Oracle 힌트]] — `/*+ ... */`, 플랜·Baseline
+- [[Oracle 시노님]] — private/public synonym, 이름 해석
 - [[Cursor 사용법]]
 - [[NotebookLM 사용법]]
 - [[현존 AI 비교]]

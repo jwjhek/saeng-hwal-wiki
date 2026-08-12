@@ -7,7 +7,7 @@ draft: false
 
 > **분류:** 개발 › 프레임워크·DB · [[생활위키 목차]]
 
-**Playwright**는 브라우저를 **자동으로 조작**해 E2E(종단) 테스트·스크래핑·UI 검증에 쓰는 도구다.  
+**Playwright**는 브라우저를 **자동으로 조작**해 E2E(종단) 테스트·스크래핑·UI 검증에 쓰는 도구다. 
 Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하나의 API**로 다룬다.
 
 공식: [https://playwright.dev](https://playwright.dev)
@@ -18,7 +18,7 @@ Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하
 
 ---
 
-## 1. 한눈에
+## 1. 개요
 
 | 항목 | 내용 |
 |------|------|
@@ -32,7 +32,7 @@ Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하
 
 ---
 
-## 2. 왜 쓰나
+## 2. 쓰는 이유
 
 | 목적 | 예 |
 |------|-----|
@@ -49,12 +49,12 @@ Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하
 
 ```text
 브라우저 (Browser)
-    └── 컨텍스트 (BrowserContext)  ← 쿠키·스토리지가 격리된 프로필 감각
-            └── 페이지 (Page)      ← 탭 하나
-                    └── 로케이터 (Locator) ← 버튼·입력창 찾는 손
+ └── 컨텍스트 (BrowserContext) ← 쿠키·스토리지가 격리된 프로필
+ └── 페이지 (Page) ← 탭 하나
+ └── 로케이터 (Locator) ← 버튼·입력창 찾는 손
 ```
 
-| 용어 | 감각 |
+| 용어 | 설명 |
 |------|------|
 | **Browser** | Chromium 등 프로세스 |
 | **Context** | 독립 세션(쿠키 분리). 테스트마다 새로 만들면 격리가 쉬움 |
@@ -67,7 +67,7 @@ Microsoft가 주도하는 오픈소스이며, Chromium·Firefox·WebKit을 **하
 
 ---
 
-## 4. 설치·첫 실행 (JS/TS 감각)
+## 4. 설치·첫 실행 (JS/TS)
 
 Node가 있는 환경에서 (버전은 공식 권장 확인):
 
@@ -86,8 +86,8 @@ npx playwright install
 import { test, expect } from '@playwright/test'
 
 test('홈에 제목이 있다', async ({ page }) => {
-  await page.goto('https://example.com')
-  await expect(page).toHaveTitle(/Example/)
+ await page.goto('https://example.com')
+ await expect(page).toHaveTitle(/Example/)
 })
 ```
 
@@ -95,8 +95,8 @@ test('홈에 제목이 있다', async ({ page }) => {
 
 ```bash
 npx playwright test
-npx playwright test --ui          # UI 모드
-npx playwright codegen https://example.com   # 조작 녹화 → 코드
+npx playwright test --ui # UI 모드
+npx playwright codegen https://example.com # 조작 녹화 → 코드
 ```
 
 **codegen**: 직접 클릭해 보며 코드를 뽑을 때 유용. 그대로 커밋하기보다 **로케이터를 다듬는** 편이 유지보수에 낫다.
@@ -131,15 +131,15 @@ CI: [[GitHub]] Actions 등에서 `npx playwright install --with-deps` 패턴이 
 
 ## 6. 로케이터·안정성 팁
 
-1. **테스트 전용 `data-testid`** 를 프론트와 약속하면 문구 변경에 강함  
-2. `text=정확한문구`만 의존하면 i18n·카피에 깨지기 쉬움  
-3. 네트워크 대기: `page.waitForURL`, response 대기 — `waitForTimeout` 남용 금지  
-4. 플레이크(가끔 실패): 병렬·애니메이션·AB 테스트 원인 분리  
-5. 시크릿·실서버 비밀번호를 저장소에 넣지 않음 → `private/`·CI 시크릿  
+1. **테스트 전용 `data-testid`** 를 프론트와 약속하면 문구 변경에 강함 
+2. `text=정확한문구`만 의존하면 i18n·카피에 깨지기 쉬움 
+3. 네트워크 대기: `page.waitForURL`, response 대기 — `waitForTimeout` 남용 금지 
+4. 플레이크(가끔 실패): 병렬·애니메이션·AB 테스트 원인 분리 
+5. 시크릿·실서버 비밀번호를 저장소에 넣지 않음 → `private/`·CI 시크릿 
 
 ---
 
-## 7. Selenium·Cypress와 고를 때 (감각)
+## 7. Selenium·Cypress와 고를 때 
 
 | | Playwright | Selenium | Cypress |
 |--|------------|----------|---------|
@@ -154,35 +154,35 @@ CI: [[GitHub]] Actions 등에서 `npx playwright install --with-deps` 패턴이 
 
 ## 8. 하지 말 것
 
-- 약관 금지 사이트 대량 스크래핑·우회 로그인  
-- 실사용자 계정으로 파괴적 테스트  
-- 프로덕션에서 부하·결제 실결제 남발  
-- 실패를 `force: true` 클릭으로만 덮기  
+- 약관 금지 사이트 대량 스크래핑·우회 로그인 
+- 실사용자 계정으로 파괴적 테스트 
+- 프로덕션에서 부하·결제 실결제 남발 
+- 실패를 `force: true` 클릭으로만 덮기 
 
 ---
 
 ## 9. 실전 체크
 
-- [ ] `playwright install`로 브라우저 설치  
-- [ ] codegen으로 초안 → 로케이터 정리  
-- [ ] `getByRole` / test id 우선  
-- [ ] 실패 시 trace·스크린샷 켜 두기  
-- [ ] CI에 브라우저·의존성 포함  
-- [ ] 스테이징 URL·테스트 계정만 사용  
+- [ ] `playwright install`로 브라우저 설치 
+- [ ] codegen으로 초안 → 로케이터 정리 
+- [ ] `getByRole` / test id 우선 
+- [ ] 실패 시 trace·스크린샷 켜 두기 
+- [ ] CI에 브라우저·의존성 포함 
+- [ ] 스테이징 URL·테스트 계정만 사용 
 
 ---
 
 ## 10. 정리
 
-Playwright는 **멀티 브라우저 E2E·자동화**를 한 API로 다루는 도구다.  
+Playwright는 **멀티 브라우저 E2E·자동화**를 한 API로 다루는 도구다. 
 설치 → codegen/테스트 작성 → locator·trace로 안정화 → CI 순이 기본 흐름이다.
 
 ---
 
 ## 면책
 
-> **면책**  
-> 사이트 이용약관·robots·개인정보·저작권을 위반하는 자동 수집·공격에 쓰지 않는다.  
+> **면책** 
+> 사이트 이용약관·robots·개인정보·저작권을 위반하는 자동 수집·공격에 쓰지 않는다. 
 > 이 글은 학습용이며, CI·버전별 CLI는 공식 문서가 우선이다.
 
 ---

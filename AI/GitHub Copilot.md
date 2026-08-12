@@ -113,12 +113,12 @@ Windows에 MS Copilot이 있어도 GitHub Copilot 완성이 자동으로 생기�
 
 ## 5. Cursor·Continue와 고를 때
 
-| | GitHub Copilot | [[Cursor 사용법\|Cursor]] | Continue ([[VS Code 추천 확장]]) |
-|--|----------------|---------------------------|----------------------------------|
-| 형태 | VS Code **확장** | VS Code 포크 **에디터** | VS Code 확장 |
-| 모델 | GitHub이 제공하는 쪽 | Cursor 구독·모델 선택 | API·로컬 모델을 사용자가 연결 |
-| 에이전트 | 채팅·(시점별) 에이전트 기능 | Agent가 제품 핵심 | 설정에 따라 |
-| 팀 | GitHub·조직 정책과 맞추기 쉬움 | 개인·팀 Cursor | 키·비용 직접 관리 |
+|      | GitHub Copilot       | [[Cursor 사용법\|Cursor]] | Continue ([[VS Code 추천 확장]]) |
+| ---- | -------------------- | ---------------------- | ---------------------------- |
+| 형태   | VS Code **확장**       | VS Code 포크 **에디터**     | VS Code 확장                   |
+| 모델   | GitHub이 제공하는 쪽       | Cursor 구독·모델 선택        | API·로컬 모델을 사용자가 연결           |
+| 에이전트 | 채팅·(시점별) 에이전트 기능     | Agent가 제품 핵심           | 설정에 따라                       |
+| 팀    | GitHub·조직 정책과 맞추기 쉬움 | 개인·팀 Cursor            | 키·비용 직접 관리                   |
 
 - 이미 **Cursor만** 쓰면 Copilot 확장은 보통 겹친다 → 하나만.  
 - “VS Code 유지 + GitHub 결제” → Copilot.  
