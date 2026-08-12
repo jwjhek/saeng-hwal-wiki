@@ -2,9 +2,11 @@
 publish: true
 draft: false
 depth: article
+aliases:
+  - Sound Assistant
 ---
 
-# Sound Assistant
+# Sound Assistant 사용법
 
 > **분류:** 모바일·결제 · [[생활위키 목차]]
 

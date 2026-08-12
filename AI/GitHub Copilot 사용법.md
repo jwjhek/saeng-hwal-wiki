@@ -1,9 +1,11 @@
 ---
 publish: true
 draft: false
+aliases:
+  - GitHub Copilot
 ---
 
-# GitHub Copilot
+# GitHub Copilot 사용법
 
 > **분류:** AI · [[생활위키 목차]]
 
@@ -44,7 +46,7 @@ VS Code에 Copilot 확장 설치·권한
 
 ## 2. Microsoft Copilot과 분류
 
-| | [[GitHub Copilot]] | [[Microsoft Copilot]] |
+| | [[GitHub Copilot 사용법]] | [[Microsoft Copilot]] |
 |--|--------------------|------------------------|
 | 브랜드 | GitHub Copilot | Microsoft Copilot |
 | 목적 | **소프트웨어 작성** | 일반 비서·Office·Windows |

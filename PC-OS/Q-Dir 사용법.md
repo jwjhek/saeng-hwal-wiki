@@ -2,9 +2,11 @@
 publish: true
 draft: false
 depth: article
+aliases:
+  - Q-Dir
 ---
 
-# Q-Dir
+# Q-Dir 사용법
 
 > **분류:** PC·OS · [[생활위키 목차]]
 
@@ -16,7 +18,7 @@ depth: article
 
 확인일: 2026-08-11
 
-관련: [[윈도우 사용법]] · [[Everything]] · [[반디집]] · [[WinMerge 사용법]] · [[웹 드라이브 비교]]
+관련: [[윈도우 사용법]] · [[Everything 사용법]] · [[반디집 사용법]] · [[WinMerge 사용법]] · [[웹 드라이브 비교]]
 
 ---
 
@@ -200,8 +202,8 @@ Q-Dir만의 **창·탭·칸 이동** 단축키는 `도움말`·설정에서 확�
 
 ## 관련
 
-- [[반디집]]
-- [[Everything]]
+- [[반디집 사용법]]
+- [[Everything 사용법]]
 - [[윈도우 사용법]]
 - [[WinMerge 사용법]]
 - [[웹 드라이브 비교]]

@@ -380,7 +380,7 @@ Windows에서 클라우드 동기화 폴더를 쓸 때:
 | `PC-OS/` · `작성-지식/` · `AI/` · … | 본문 노트 (분류별) |
 | `개발/언어/` 등 | 개발 하위 분류 |
 | `templates/` | 템플릿 (Quartz 빌드 제외) |
-| `quartz.config.yaml` | [[Quartz]] 사이트 설정 |
+| `quartz.config.yaml` | [[Quartz 사용법]] 사이트 설정 |
 | `private/` | 민감 메모 (gitignore) |
 | `attachments/` 등 | 이미지·첨부 |
 | `.obsidian/` | Obsidian 설정 |
@@ -413,5 +413,5 @@ Windows에서 클라우드 동기화 폴더를 쓸 때:
 - [[VS Code 사용법]]
 - [[메모 앱]]
 - [[Cursor 사용법]]
-- [[Quartz]]
+- [[Quartz 사용법]]
 - [[생활위키 목차]]

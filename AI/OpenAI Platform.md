@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# OpenAI Platform (platform.openai.com)
+# OpenAI Platform
 
 > **분류:** AI · [[생활위키 목차]]
 
@@ -140,7 +140,7 @@ print(response.output_text)
 - **Structured Outputs** — JSON 스키마에 맞춘 응답 
 - **Tools** — 웹 검색, 파일 검색, 함수 호출, 코드 실행 등 
 - **Embeddings** — 검색·RAG용 벡터 
-- **Images / Audio / Vision** — 생성·분석·음성 
+- **Images / Audio / Vision** — 생성·분석·음성 ([[OpenAI STT]] — 전사)
 
 세부 스키마는 [API Reference](https://developers.openai.com/api/reference/overview/)를 본다.
 
@@ -195,7 +195,7 @@ Playground 사용량도 **API와 같이 과금**되는 경우가 많다 (계정�
 ```text
 ChatGPT 앱 ── 사람용 UI (구독)
 Platform API ── 앱·서버 연동 (종량)
-Azure OpenAI ── 기업·규정·리전 (Microsoft 계약, 엔드포인트·배포명 다름)
+Azure OpenAI ── 기업·규정·리전 (Microsoft 계약, 엔드포인트·배포명 다름) → [[클라우드 AWS GCP Azure]]
 Cursor 등 IDE ── 자체 과금/모델 라우팅 (Platform 키와 별개인 경우 많음)
 ```
 
@@ -255,6 +255,8 @@ npm install openai
 ## 관련
 
 - [[현존 AI 비교]]
+- [[OpenAI STT]]
+- [[클라우드 AWS GCP Azure]]
 - [[Python 학습과 패키지]]
 - [[Cursor 사용법]]
 - [[NotebookLM 사용법]]

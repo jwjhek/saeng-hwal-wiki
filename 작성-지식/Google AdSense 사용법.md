@@ -2,14 +2,16 @@
 publish: true
 draft: false
 depth: article
+aliases:
+  - Google AdSense
 ---
 
-# Google AdSense
+# Google AdSense 사용법
 
 > **분류:** 작성·지식 › 노트·지식 · [[생활위키 목차]]
 
 **Google AdSense**는 웹사이트·블로그에 **Google 광고**를 붙여 수익을 나누는 프로그램이다. 
-[[Quartz]]로 빌드한 **GitHub Pages** 정적 사이트에 연결할 때 필요한 **일반 절차**를 정리한다.
+[[Quartz 사용법]]로 빌드한 **GitHub Pages** 정적 사이트에 연결할 때 필요한 **일반 절차**를 정리한다.
 
 공식: [https://www.google.com/adsense](https://www.google.com/adsense)
 
@@ -193,7 +195,7 @@ GitHub Pages artifact → deploy
 | 소유권 확인 실패                | 등록 도메인(루트)의 `<head>`에 스크립트·**배포 완료** 후 재시도                        |
 | ads.txt 오류               | 등록 도메인 루트의 `/ads.txt`가 열리는지, pub-ID 오타                            |
 | 본문만 수정했는데 루트 검증 실패       | 검증 대상이 **루트**이면 루트 저장소도 수정·push                                   |
-| 링크·OG 깨짐                 | `quartz.config.yaml`의 `baseUrl`이 실제 Pages URL과 일치 ([[Quartz]] §5) |
+| 링크·OG 깨짐                 | `quartz.config.yaml`의 `baseUrl`이 실제 Pages URL과 일치 ([[Quartz 사용법]] §5) |
 | 승인 대기만 길음                | 콘텐츠·정책·트래픽. **개인정보 처리방침**·소개 페이지 보강                               |
 
 ---
@@ -223,7 +225,7 @@ GitHub Pages artifact → deploy
 
 ## 관련
 
-- [[Quartz]]
+- [[Quartz 사용법]]
 - [[GitHub]]
 - [[Git 사용법]]
 - [[Obsidian 사용법]]

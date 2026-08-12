@@ -1,17 +1,19 @@
 ---
 publish: true
 draft: false
+aliases:
+  - Quartz
 ---
 
-# Quartz
+# Quartz 사용법
 
 > **분류:** 작성·지식 › 노트·지식 · [[생활위키 목차]]
 
 **Quartz**는 마크다운 노트(특히 **Obsidian** vault)를 **정적 웹사이트**로 빌드하는 도구다. 
-이 생활위키는 Obsidian으로 글을 쓰고, Quartz로 **`publish: true`만 골라** [GitHub Pages](https://pages.github.com)에 올린다.
+공개 위키는 Obsidian으로 글을 쓰고, Quartz로 **`publish: true`만 골라** [GitHub Pages](https://pages.github.com)에 올릴 수 있다.
 
 공식: [https://quartz.jzhao.xyz](https://quartz.jzhao.xyz)  
-이 vault: `quartz.config.yaml` · `npm run preview:wiki` · `.github/workflows/deploy.yml`
+프로젝트 예: `quartz.config.yaml` · `npm run preview:wiki` · `.github/workflows/deploy.yml`
 
 확인일: 2026-08-11
 
@@ -26,14 +28,14 @@ draft: false
 | 무엇 | **SSG**(정적 사이트 생성기). `.md` → HTML·CSS·JS 묶음 |
 | 만든 이유 | 디지털 가든·위키·노트를 **웹에 공개** (서버 없이 호스팅 가능) |
 | Obsidian | `[[위키링크]]`, callout, mermaid 등 **OFM** 지원 플러그인 사용 |
-| 이 vault | vault **루트**가 콘텐츠 (`npx quartz build -d .`) |
+| 예시 프로젝트 | vault **루트**가 콘텐츠 (`npx quartz build -d .`) |
 | 공개 정책 | **ExplicitPublish** — `publish: true`인 글만 사이트에 포함 |
 
 Quartz는 **편집기가 아니다.** 글은 [[Obsidian 사용법]]·[[Cursor 사용법]]에서 쓰고, Quartz는 **빌드·배포** 담당이다.
 
 ---
 
-## 2. 이 생활위키에서의 위치
+## 2. 프로젝트 구성 예
 
 ```text
 [작성] Obsidian / Cursor → .md (분류 폴더)
@@ -89,9 +91,9 @@ Quartz는 **편집기가 아니다.** 글은 [[Obsidian 사용법]]·[[Cursor �
 
 ## 5. 핵심 설정 (`quartz.config.yaml`)
 
-| 항목 | 이 vault 예 |
+| 항목 | 프로젝트 예 |
 |------|-------------|
-| `pageTitle` | 생활위키 |
+| `pageTitle` | 사이트 제목 |
 | `locale` | `ko-KR` |
 | `baseUrl` | GitHub Pages 경로 (`username.github.io/repo-name`, `https://` 없이) |
 | `ignorePatterns` | `private`, `templates`, `.obsidian`, `node_modules`, `**/*.md` 제외한 비마크다운 등 |
@@ -118,7 +120,7 @@ draft: false    # true면 remove-draft로 제외
 | `draft: true` | 빌드 제외 |
 
 **주의:** GitHub 저장소가 **public**이면 `publish: false` 글도 **Git에는 보인다.** 비밀은 `private/`(gitignore) 또는 **private repo**.  
-암호 걸기는 `encrypted-pages` 플러그인으로 가능하나, 이 vault에서는 옵션만 켜져 있고 일반 글은 `publish`로 나눈다.
+암호 걸기는 `encrypted-pages` 플러그인으로 가능하나, 예시 프로젝트에서는 일반 글을 `publish`로 나눈다.
 
 템플릿: `templates/노트-공개.md`, `templates/노트-비공개.md`
 
@@ -168,7 +170,7 @@ push main (또는 workflow_dispatch)
 
 ## 9. 켜져 있는 기능 (요약)
 
-이 vault `quartz.config.yaml` 기준, 읽는 사람이 쓰는 UI:
+예시 `quartz.config.yaml` 기준, 읽는 사람이 쓰는 UI:
 
 | 기능 | 플러그인·설정 |
 |------|----------------|
@@ -233,7 +235,7 @@ Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://git
 | 항목 | 한 줄 |
 |------|--------|
 | 정의 | Obsidian형 마크다운 → **정적 위키 사이트** 생성기 |
-| 이 vault | 루트가 콘텐츠, **`publish: true`만 공개** |
+| 예시 프로젝트 | 루트가 콘텐츠, **`publish: true`만 공개** |
 | 로컬 | `npm run preview:wiki` |
 | 배포 | GitHub Actions → **Pages** |
 | 편집 | Quartz가 아니라 **Obsidian·Cursor** |
@@ -245,7 +247,7 @@ Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://git
 > **면책**  
 > Quartz·플러그인·Node 요구 사항은 **버전마다 다르다.** 공식 문서·`package.json` engines를 본다.  
 > `publish: false`도 **public Git**에 올라가면 저장소에서 읽힐 수 있다.  
-> 이 글은 이 vault 구성 예시이며, 다른 Quartz 프로젝트와 1:1 같지 않을 수 있다.
+> 이 글은 프로젝트 구성 예시이며, 다른 Quartz 프로젝트와 1:1 같지 않을 수 있다.
 
 ---
 
@@ -256,6 +258,6 @@ Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://git
 - [[Cursor 사용법]]
 - [[GitHub]]
 - [[Git 사용법]]
-- [[Google AdSense]]
+- [[Google AdSense 사용법]]
 - [[Notion 사용법]]
 - [[VS Code 사용법]]

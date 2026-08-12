@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# Spring Framework · Spring Boot 학습
+# Spring과 Spring Boot 학습
 
 > **분류:** 개발 › 프레임워크·DB · [[생활위키 목차]]
 
@@ -440,6 +440,7 @@ JPA 또는 MyBatis 연결 → DB 저장 → 예외·검증 메시지 정리
 ## 관련
 
 - [[전자정부프레임워크]]
+- [[Django Flask FastAPI 학습]]
 - [[Java 언어 학습]]
 - [[디자인 패턴]]
 - [[Oracle DB와 튜닝]]

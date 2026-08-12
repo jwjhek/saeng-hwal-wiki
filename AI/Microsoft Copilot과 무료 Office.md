@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# Microsoft Copilot과 무료 Office 팁
+# Microsoft Copilot과 무료 Office
 
 > **분류:** AI · [[생활위키 목차]]
 
@@ -12,7 +12,7 @@ draft: false
 
 확인일: 2026-08-06
 
-관련 AI 큰 그림: [[현존 AI 비교]] · 제품 설명: [[Microsoft Copilot]] · 코딩용은 [[GitHub Copilot]] (별개 제품).
+관련 AI 큰 그림: [[현존 AI 비교]] · 제품 설명: [[Microsoft Copilot]] · 코딩용은 [[GitHub Copilot 사용법]] (별개 제품).
 
 ---
 
@@ -24,7 +24,7 @@ draft: false
 | **Microsoft 365 웹/앱의 Office** | Word·Excel·PowerPoint를 **브라우저**에서 (계정만으로도 기본 사용 가능) |
 | **Microsoft 365 Personal/Family 등 구독** | 데스크톱 앱 설치·OneDrive 용량·Copilot이 앱 안에 더 깊이 붙는 경우 |
 | **Microsoft 365 Copilot (유료 추가 라이선스)** | 회사 데이터·고급 에이전트 등. “챗 공짜”와 다름 |
-| **GitHub Copilot** | VS Code 코딩 AI — [[GitHub Copilot]] |
+| **GitHub Copilot** | VS Code 코딩 AI — [[GitHub Copilot 사용법]] |
 
 “MS 코파일럿”만으로는 위가 한꺼번에 불린다. **어느 로그인·어느 URL**인지 보면 헷갈림이 줄어든다.
 
@@ -132,7 +132,7 @@ PDF·긴 공지 URL을 열어 두고 “요약해 표로” 시킨 뒤 Excel 웹
 4. **한글** — 웹 Office도 한글 잘 되지만, 폰트·쪽 나눔은 데스크톱과 조금 다를 수 있음. 
 5. **오프라인** — 웹은 망 필요. 비행기 모드 작업이면 구독 데스크톱·로컬 저장 검토. 
 6. **갤럭시** — Microsoft 365 / Copilot 앱으로 폰에서 이어서 편집 ([[갤럭시 폰 사용법]]).  
-7. **크롬에서도** — Office는 브라우저 가리지 않는 편. Edge 전용 기능만 Edge ([[크롬]]). 
+7. **크롬에서도** — Office는 브라우저 가리지 않는 편. Edge 전용 기능만 Edge ([[크롬 사용법]]).
 8. **AI 한도** — 개인 구독의 AI 크레딧·일일 한도가 있으면 고용량 작업은 나눠서. 
 9. **생성물 검증** — 표 합계·날짜·고유명사 재계산. 
 10. **대안** — Google 문서, 한글(웹), 로컬 오픈소스 오피스 등. 이 위키는 MD면 [[Obsidian 사용법]]·[[VS Code 사용법]].
@@ -174,10 +174,10 @@ PDF·긴 공지 URL을 열어 두고 “요약해 표로” 시킨 뒤 Excel 웹
 
 - [[생활위키 목차]]
 - [[Microsoft Copilot]]
-- [[GitHub Copilot]]
+- [[GitHub Copilot 사용법]]
 - [[웹 드라이브 비교]]
 - [[윈도우 사용법]]
 - [[현존 AI 비교]]
-- [[크롬]]
+- [[크롬 사용법]]
 - [[VS Code 추천 확장]]
 - [[갤럭시 폰 사용법]]

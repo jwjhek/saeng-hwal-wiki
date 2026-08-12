@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# Java 언어 — 기초부터 심화
+# Java 언어 학습
 
 > **분류:** 개발 › 언어 · [[생활위키 목차]]
 

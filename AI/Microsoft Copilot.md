@@ -8,7 +8,7 @@ draft: false
 > **분류:** AI · [[생활위키 목차]]
 
 **Microsoft Copilot**은 마이크로소프트의 대화형·업무용 AI 브랜드다.  
-코딩 IDE용 **GitHub Copilot**과는 **제품·구독·쓰는 곳이 다르다** → [[GitHub Copilot]].
+코딩 IDE용 **GitHub Copilot**과는 **제품·구독·쓰는 곳이 다르다** → [[GitHub Copilot 사용법]].
 
 확인일: 2026-08-10  
 요금·메뉴·모델명은 자주 바뀐다. [copilot.microsoft.com](https://www.copilot.microsoft.com) · [Microsoft 지원](https://support.microsoft.com) · 로그인 계정이 최종이다.
@@ -24,7 +24,7 @@ draft: false
 | **Microsoft Copilot** (소비자) | 웹, Edge, Windows, 모바일 앱 | 질문·초안·요약·이미지 등 일반 비서 |
 | **Microsoft 365 안 Copilot** | Word·Excel·Outlook 등 (구독·계정에 따라) | 문서·메일·시트 **안에서** 초안·수식·요약 |
 | **Microsoft 365 Copilot** (추가 라이선스) | 회사·유료 좌석 | 조직 데이터·고급 에이전트 등. 무료 챗과 **다른 층** |
-| **GitHub Copilot** | VS Code·JetBrains 등 | **코드** 완성·채팅 → [[GitHub Copilot]] |
+| **GitHub Copilot** | VS Code·JetBrains 등 | **코드** 완성·채팅 → [[GitHub Copilot 사용법]] |
 
 같은 아이콘·이름이라도 **개인 Microsoft 계정 vs 회사 계정**, **무료 vs M365 구독 vs 추가 라이선스**에 따라 메뉴가 갈린다.
 
@@ -95,15 +95,15 @@ OS에 붙어 있어도 **라이선스·지역·업데이트**에 따라 안 보�
 
 ## 5. GitHub Copilot과 비교
 
-| | Microsoft Copilot | [[GitHub Copilot]] |
+| | Microsoft Copilot | [[GitHub Copilot 사용법]] |
 |--|-------------------|-------------------|
 | 회사 축 | Microsoft | GitHub (Microsoft 계열이나 **제품 분리**) |
 | 주 무대 | 웹·Office·Windows·일반 질문 | VS Code·IDE·저장소 코드 |
 | 결과물 | 글·표·요약·이미지 등 | 코드 제안·채팅·PR 보조 |
 | 구독 | Microsoft 계정 / M365 / 추가 라이선스 | GitHub Copilot 구독(개인·학생·조직) |
-| 이 위키 | 이 글 · [[Microsoft Copilot과 무료 Office]] | [[GitHub Copilot]] · [[VS Code 추천 확장]] |
+| 이 위키 | 이 글 · [[Microsoft Copilot과 무료 Office]] | [[GitHub Copilot 사용법]] · [[VS Code 추천 확장]] |
 
-“코파일럿 켰는데 코드 완성이 없다” → 대개 **MS Copilot만** 켠 상태다. 코딩은 [[GitHub Copilot]] 또는 [[Cursor 사용법]].
+“코파일럿 켰는데 코드 완성이 없다” → 대개 **MS Copilot만** 켠 상태다. 코딩은 [[GitHub Copilot 사용법]] 또는 [[Cursor 사용법]].
 
 ---
 
@@ -123,7 +123,7 @@ OS에 붙어 있어도 **라이선스·지역·업데이트**에 따라 안 보�
 - [ ] 지금 쓰는 것이 **소비자 / M365 앱 안 / 회사 추가 라이선스** 중 무엇인지  
 - [ ] 개인 계정과 회사 계정을 섞어 쓰지 않는지  
 - [ ] 기밀·주민번호·카드 정보를 넣지 않는지  
-- [ ] 코딩이 목표면 [[GitHub Copilot]]을 보는지  
+- [ ] 코딩이 목표면 [[GitHub Copilot 사용법]]을 보는지
 - [ ] Office 파일은 [[Microsoft Copilot과 무료 Office]] 흐름을 아는지  
 
 ---
@@ -139,10 +139,10 @@ OS에 붙어 있어도 **라이선스·지역·업데이트**에 따라 안 보�
 ## 관련
 
 - [[생활위키 목차]]
-- [[GitHub Copilot]]
+- [[GitHub Copilot 사용법]]
 - [[Microsoft Copilot과 무료 Office]]
 - [[현존 AI 비교]]
 - [[웹 드라이브 비교]]
 - [[윈도우 사용법]]
-- [[크롬]] · Edge는 Windows·MS 계정과 함께 쓰는 경우가 많음
+- [[크롬 사용법]] · Edge는 Windows·MS 계정과 함께 쓰는 경우가 많음
 - [[Cursor 사용법]] — 코딩 에디터(별개)

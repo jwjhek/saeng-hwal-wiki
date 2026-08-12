@@ -47,7 +47,7 @@ draft: false
 | Windows | [git-scm.com](https://git-scm.com) 설치. Git Bash·자격 증명 관리자 포함되는 경우가 많음 |
 | macOS | Xcode CLT 또는 공식 설치 |
 | Linux | 배포판 패키지 (`git`) |
-| Android | [[Termux]] — `pkg install git` |
+| Android | [[Termux 사용법]] — `pkg install git` |
 
 ```powershell
 git config --global user.name "이름"

@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# Python 학습과 주요 패키지
+# Python 학습과 패키지
 
 > **분류:** 개발 › 언어 · [[생활위키 목차]]
 
@@ -423,6 +423,8 @@ print(df.groupby("city")["sales"].sum())
 | **Flask** | 가벼운 웹/API |
 | **FastAPI** | 타입힌트 기반 API, OpenAPI 자동, 속도·DX 좋음 |
 | **Django** | 풀스택·관리자·ORM 포함 대형 웹 |
+
+선택·구조·학습 순서는 [[Django Flask FastAPI 학습]]을 본다.
 | **Starlette** / **uvicorn** | ASGI·FastAPI 하단 |
 
 ```python
@@ -545,6 +547,7 @@ LLM API → 공식 SDK + 필요 시 오케스트레이션 라이브러리
 - [[생활위키 목차]]
 - [[Java 언어 학습]]
 - [[Spring과 Spring Boot 학습]]
+- [[Django Flask FastAPI 학습]]
 - [[Oracle DB와 튜닝]]
 - [[현존 AI 비교]]
 - [[Cursor 사용법]]

@@ -5,9 +5,10 @@ depth: article
 aliases:
   - MS To Do
   - 마이크로소프트 To Do
+  - Microsoft To Do
 ---
 
-# Microsoft To Do
+# Microsoft To Do 사용법
 
 > **분류:** 작성·지식 › 노트·지식 · [[생활위키 목차]]
 

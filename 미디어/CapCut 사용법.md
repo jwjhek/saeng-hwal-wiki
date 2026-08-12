@@ -1,9 +1,11 @@
 ---
 publish: true
 draft: false
+aliases:
+  - CapCut
 ---
 
-# CapCut
+# CapCut 사용법
 
 > **분류:** 미디어 · [[생활위키 목차]]
 

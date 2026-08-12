@@ -232,7 +232,7 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 
 ## 10. GitHub Copilot
 
-전용 정리: [[GitHub Copilot]] (Microsoft Copilot과 구분).
+전용 정리: [[GitHub Copilot 사용법]] (Microsoft Copilot과 구분).
 
 게시자: **GitHub**. 대표 확장:
 

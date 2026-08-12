@@ -21,7 +21,7 @@ aliases:
 공식: [ISMS-P 인증 (KISA)](https://isms.kisa.or.kr/) · [isms-p.or.kr](https://www.isms-p.or.kr/)  
 확인일: 2026-08-11
 
-관련: [[전자정부프레임워크]] · [[Spring과 Spring Boot 학습]] · [[Git 사용법]] · [[Docker 사용법]]
+관련: [[전자정부프레임워크]] · [[Spring과 Spring Boot 학습]] · [[Git 사용법]] · [[Docker 사용법]] · [[클라우드 AWS GCP Azure]]
 
 ---
 

@@ -316,7 +316,7 @@ Import로 CSV를 테이블에 넣을 수 있다. 문자셋(UTF-8)·날짜 포맷
 | 툴 | 설명 |
 |----|------|
 | **DBeaver CE** | 무료·다 DB·만능에 가깝다 |
-| **SQL Developer** | Oracle 특화 |
+| **[[SQL Developer 사용법]]** | Oracle 특화 — 실행 계획·Data Pump·PL/SQL 디버그 |
 | **DataGrip** | 유료·완성도·리팩터 |
 | **VS Code SQLTools** | 에디터 안에서 가볍게 ([[VS Code 추천 확장]]) |
 | **Excel + ODBC** | 분석용, 스키마 관리엔 부적합 |
@@ -356,6 +356,7 @@ Import로 CSV를 테이블에 넣을 수 있다. 문자셋(UTF-8)·날짜 포맷
 
 - [[생활위키 목차]]
 - [[Oracle DB와 튜닝]]
+- [[SQL Developer 사용법]]
 - [[Oracle 힌트]]
 - [[Oracle 시노님]]
 - [[VS Code 사용법]]

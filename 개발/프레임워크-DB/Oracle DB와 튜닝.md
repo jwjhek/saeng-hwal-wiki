@@ -3,7 +3,7 @@ publish: true
 draft: false
 ---
 
-# Oracle DB와 성능 튜닝
+# Oracle DB와 튜닝
 
 > **분류:** 개발 › 프레임워크·DB · [[생활위키 목차]]
 
@@ -37,7 +37,7 @@ Oracle은 **관계형 DBMS**다. SQL로 데이터를 넣고·읽고·트랜잭�
 sqlplus user/pass@//host:1521/ORCLPDB1
 ```
 
-도구: SQL*Plus, SQLcl, SQL Developer, 모니터링은 OEM/Cloud Control 등.
+도구: SQL*Plus, SQLcl, [[SQL Developer 사용법]], 모니터링은 OEM/Cloud Control 등.
 
 ---
 

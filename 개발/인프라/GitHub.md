@@ -98,7 +98,7 @@ Issue로 할 일을 적고 PR에 `Fixes #번호`를 넣는 흐름이 흔하다.
 | 기능 | 설명 |
 |------|------|
 | Actions | `.github/workflows/*.yml` — 테스트·빌드·배포 |
-| Pages | 정적 사이트 호스팅. 이 vault는 [[Quartz]] 빌드 → Actions 배포 |
+| Pages | 정적 사이트 호스팅. 이 vault는 [[Quartz 사용법]] 빌드 → Actions 배포 |
 | Packages | 컨테이너·라이브러리 패키지 호스팅 |
 | Codespaces | 클라우드 개발 환경 |
 | Dependabot | 의존성·보안 업데이트 PR |
@@ -170,7 +170,7 @@ GitHub는 Git 저장소를 **호스팅하고 PR·Actions·Pages로 확장**한 �
 - [[VS Code 사용법]]
 - [[VS Code 추천 확장]]
 - [[Cursor 사용법]]
-- [[Quartz]]
+- [[Quartz 사용법]]
 - [[Docker 사용법]]
 - [[Playwright]]
 - [[쿠버네티스]]

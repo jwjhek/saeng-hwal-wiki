@@ -394,7 +394,7 @@ Notion만으로 모든 걸 해결하려 하면 로컬 위키의 장점(단순 md
 
 - [[생활위키 목차]]
 - [[메모 앱]]
-- [[Microsoft To Do]] — 개인·Outlook 할 일
+- [[Microsoft To Do 사용법]] — 개인·Outlook 할 일
 - [[Obsidian 사용법]] — 로컬 마크다운 위키
 - [[Cursor 사용법]] — 초안·편집
 - [[VS Code 사용법]]

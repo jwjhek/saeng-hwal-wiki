@@ -20,7 +20,7 @@ aliases:
 공식: [SQL Tuning Guide — Optimizer Hints](https://docs.oracle.com/en/database/oracle/oracle-database/)  
 확인일: 2026-08-11
 
-관련: [[Oracle DB와 튜닝]] · [[Oracle 시노님]] · [[DBeaver 사용법]] · [[전자정부프레임워크]]
+관련: [[Oracle DB와 튜닝]] · [[Oracle 시노님]] · [[SQL Developer 사용법]] · [[DBeaver 사용법]] · [[전자정부프레임워크]]
 
 ---
 
@@ -171,7 +171,7 @@ SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(NULL, NULL, 'ALLSTATS LAST'));
 | **Operation** | INDEX RANGE SCAN vs TABLE ACCESS FULL |
 | **A-Rows vs E-Rows** | 통계·힌트 불일치 신호 ([[Oracle DB와 튜닝]] §5.5) |
 
-[[DBeaver 사용법]] — Explain·실행 계획 뷰로 같은 내용을 GUI에서 볼 수 있다.
+[[SQL Developer 사용법]] · [[DBeaver 사용법]] — Explain·실행 계획 뷰로 같은 내용을 GUI에서 볼 수 있다.
 
 ---
 
@@ -246,6 +246,7 @@ SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(NULL, NULL, 'ALLSTATS LAST'));
 
 - [[Oracle DB와 튜닝]]
 - [[Oracle 시노님]]
+- [[SQL Developer 사용법]]
 - [[DBeaver 사용법]]
 - [[전자정부프레임워크]]
 - [[Spring과 Spring Boot 학습]]

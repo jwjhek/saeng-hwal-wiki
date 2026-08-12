@@ -119,7 +119,7 @@ depth: hub
 - **약점**: 365를 안 쓰면 매력이 급감, “순수 채팅 품질”만 보면 ChatGPT/Claude 앱과 겹침
 - **이런 사람에게**: 회사 PC가 이미 Microsoft 중심
 - **전용 글**: [[Microsoft Copilot]] · 웹 Office·초안 팁 [[Microsoft Copilot과 무료 Office]]
-- **코딩용과 구분**: [[GitHub Copilot]] (이름만 비슷한 별개 제품)
+- **코딩용과 구분**: [[GitHub Copilot 사용법]] (이름만 비슷한 별개 제품)
 
 ### 3.6 Perplexity
 
@@ -156,7 +156,7 @@ depth: hub
 | 제품 | 역할 |
 |------|------|
 | [[Cursor 사용법\|Cursor]] | VS Code 기반 에디터. 여러 LLM을 골라 Agent/Chat/Inline으로 코드 수정 |
-| [[GitHub Copilot]] | IDE 자동완성·채팅. GitHub 생태계 |
+| [[GitHub Copilot 사용법]] | IDE 자동완성·채팅. GitHub 생태계 |
 | Claude Code 등 | 터미널·에이전트형 코딩 워크플로 |
 | Windsurf 등 | Cursor와 비슷한 AI IDE 경쟁 제품 |
 
@@ -320,7 +320,7 @@ depth: hub
 
 - [[생활위키 목차]]
 - [[Microsoft Copilot]]
-- [[GitHub Copilot]]
+- [[GitHub Copilot 사용법]]
 - [[Microsoft Copilot과 무료 Office]]
 - [[OpenAI Platform]]
 - [[NotebookLM 사용법]]
