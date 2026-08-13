@@ -37,7 +37,7 @@ Oracle은 **관계형 DBMS**다. SQL로 데이터를 넣고·읽고·트랜잭�
 sqlplus user/pass@//host:1521/ORCLPDB1
 ```
 
-도구: SQL*Plus, SQLcl, [[SQL Developer 사용법]], 모니터링은 OEM/Cloud Control 등.
+도구: SQL*Plus, SQLcl, [[SQL Developer 사용법]], [[DBeaver 사용법]]. SQL 문법 입문은 [[SQL 학습]]. 모니터링은 OEM/Cloud Control 등.
 
 ---
 
@@ -163,6 +163,8 @@ AWR을 바탕으로 자동 진단·권고. 출발점으로 좋지만, **앱 설�
 - Real-Time SQL Monitoring (`V$SQL_MONITOR`, OEM) — 오래 도는 쿼리 시각화 
 
 ### 5.5 실행계획 보기
+
+꺼내는 방법·읽는 법은 [[SQL 실행 계획]]에 모았다. Oracle 핵심만 반복하면:
 
 ```sql
 EXPLAIN PLAN FOR
@@ -354,6 +356,8 @@ SQL이 괜찮은데도 느리면:
 ## 관련
 
 - [[생활위키 목차]]
+- [[SQL 학습]] — 조인·서브쿼리 등 문법
+- [[SQL 실행 계획]] — EXPLAIN·DISPLAY_CURSOR
 - [[DBeaver 사용법]] — SQL 실행·스키마 탐색 GUI
 - [[Oracle 힌트]] — `/*+ ... */`, 플랜·Baseline
 - [[Oracle 시노님]] — private/public synonym, 이름 해석

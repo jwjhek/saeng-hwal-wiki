@@ -19,7 +19,7 @@ Oracle·PostgreSQL·MySQL·SQL Server·SQLite 등에 접속해 SQL 실행·스�
 확인일: 2026-08-11 
 UI 메뉴 이름은 버전에 따라 조금 다를 수 있다.
 
-관련 DB 학습: [[Oracle DB와 튜닝]] · [[Oracle 힌트]] · [[Oracle 시노님]] · 에디터: [[VS Code 사용법]] (SQLTools는 가벼운 대안)
+관련 DB 학습: [[SQL 학습]] · [[Oracle DB와 튜닝]] · [[Oracle 힌트]] · [[Oracle 시노님]] · 에디터: [[VS Code 사용법]] (SQLTools는 가벼운 대안)
 
 ---
 
@@ -160,7 +160,7 @@ Windows·Linux 기본값. macOS는 **Cmd**가 **Ctrl** 자리인 경우가 많�
 - 여러 문장은 `;` 또는 Oracle이면 `/` 습관에 맞춤 
 - **바인드 변수**·파라미터 프롬프트 지원 
 - 결과 탭을 여러 개 두고 비교 
-- 실행 계획: DBMS별 `Explain` 메뉴 (Oracle이면 실행 계획 뷰)
+- 실행 계획: DBMS별 `Explain` 메뉴 (Oracle이면 실행 계획 뷰) — 보는 법 [[SQL 실행 계획]]
 
 실수로 `UPDATE`/`DELETE` 없이 WHERE — 운영에선 읽기 계정·트랜잭션 확인.
 
@@ -355,6 +355,8 @@ Import로 CSV를 테이블에 넣을 수 있다. 문자셋(UTF-8)·날짜 포맷
 ## 관련
 
 - [[생활위키 목차]]
+- [[SQL 학습]]
+- [[SQL 실행 계획]]
 - [[Oracle DB와 튜닝]]
 - [[SQL Developer 사용법]]
 - [[Oracle 힌트]]

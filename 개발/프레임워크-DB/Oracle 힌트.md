@@ -171,7 +171,7 @@ SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(NULL, NULL, 'ALLSTATS LAST'));
 | **Operation** | INDEX RANGE SCAN vs TABLE ACCESS FULL |
 | **A-Rows vs E-Rows** | 통계·힌트 불일치 신호 ([[Oracle DB와 튜닝]] §5.5) |
 
-[[SQL Developer 사용법]] · [[DBeaver 사용법]] — Explain·실행 계획 뷰로 같은 내용을 GUI에서 볼 수 있다.
+[[SQL Developer 사용법]] · [[DBeaver 사용법]] · [[SQL 실행 계획]] — Explain·실행 계획 뷰로 같은 내용을 GUI에서 볼 수 있다.
 
 ---
 
@@ -244,6 +244,8 @@ SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(NULL, NULL, 'ALLSTATS LAST'));
 
 ## 관련
 
+- [[SQL 학습]]
+- [[SQL 실행 계획]]
 - [[Oracle DB와 튜닝]]
 - [[Oracle 시노님]]
 - [[SQL Developer 사용법]]

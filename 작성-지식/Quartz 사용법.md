@@ -15,7 +15,7 @@ aliases:
 공식: [https://quartz.jzhao.xyz](https://quartz.jzhao.xyz)  
 프로젝트 예: `quartz.config.yaml` · `npm run preview:wiki` · `.github/workflows/deploy.yml`
 
-확인일: 2026-08-11
+확인일: 2026-08-13
 
 관련: [[Obsidian 사용법]] · [[공개 규칙]] · [[GitHub]] · [[Cursor 사용법]]
 
@@ -239,6 +239,39 @@ Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://git
 | 로컬 | `npm run preview:wiki` |
 | 배포 | GitHub Actions → **Pages** |
 | 편집 | Quartz가 아니라 **Obsidian·Cursor** |
+| 방문 집계 | 고트카운터 등 — `analytics` 설정, 대시보드에서 확인 |
+
+---
+
+## 14. 방문 집계 (가벼운 쪽)
+
+깃허브 페이지는 **사이트 방문자 수**를 기본으로 안 준다.  
+Quartz `analytics`를 켜면 페이지 조회를 **별도 대시보드**에서 본다.
+
+| 방식 | 특징 |
+|------|------|
+| **고트카운터**(GoatCounter) | 쿠키 거의 없음, **무료 호스팅**, 일·페이지별 조회. 개인 공개 위키에 맞음 |
+| 구글 애널리틱스 | 방문자 상세. 쿠키·동의 부담이 큼 |
+| 애드센스 보고서 | **광고 노출·클릭** — 순수 방문과 다름 |
+
+### 14.1 고트카운터 켜기
+
+1. [goatcounter.com](https://www.goatcounter.com)에서 계정·**사이트 코드**를 만든다.  
+   대시보드 주소가 `https://내코드.goatcounter.com` 형식이면, 코드가 `내코드`다.  
+2. `quartz.config.yaml`의 `analytics`에 넣는다.
+
+```yaml
+analytics:
+  provider: goatcounter
+  websiteId: 내코드
+```
+
+3. 배포 후 **실제 사이트**를 한 번 연다. 미리보기(`localhost`) 조회는 집계에 섞일 수 있으니 대시보드에서 걸러 본다.  
+4. 숫자는 **고트카운터 대시보드**에서 확인한다. 위키 글 안에 방문자 수를 넣지 않는다.
+
+`websiteId`는 페이지 스크립트에 드러나므로 **비밀 키는 아니다.** 그래도 공개 글 본문에는 쓰지 않고 설정 파일에만 둔다.
+
+지금은 설정이 `analytics: null`(꺼짐)일 수 있다. 코드를 넣은 뒤에야 집계가 시작된다.
 
 ---
 

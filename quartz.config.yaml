@@ -6,7 +6,12 @@ configuration:
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
+  # 방문 집계(고트카운터). websiteId는 goatcounter.com에서 만든 사이트 코드.
+  # 예: 대시보드가 https://내코드.goatcounter.com 이면 websiteId: 내코드
   analytics: null
+  # analytics:
+  #   provider: goatcounter
+  #   websiteId: 내코드
   locale: ko-KR
   # GitHub Pages 예: username.github.io/repo-name (https:// 제외)
   baseUrl: jwjhek.github.io/saeng-hwal-wiki

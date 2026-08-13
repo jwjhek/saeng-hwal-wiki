@@ -20,7 +20,7 @@ Java 쪽과 비교하면 [[Spring과 Spring Boot 학습]].
 - Flask: [https://flask.palletsprojects.com](https://flask.palletsprojects.com)
 - FastAPI: [https://fastapi.tiangolo.com](https://fastapi.tiangolo.com)
 
-확인일: 2026-08-12  
+확인일: 2026-08-13  
 예시는 **Python 3.10+** 기준이다. 버전·패키지 이름은 배포에 따라 조금 다를 수 있다.
 
 ---
@@ -60,6 +60,26 @@ Java 쪽과 비교하면 [[Spring과 Spring Boot 학습]].
 | **적합** | CMS·관리 시스템·팀 규모 큰 웹 | 소규모·프로토타입·유연 조립 | REST·마이크로서비스·고성능 API |
 
 「무조건 FastAPI」가 아니다. **서버 렌더링 HTML·관리 화면**이 크면 Django, **가볍게 한 파일**이면 Flask, **타입 안전 API**면 FastAPI가 자주 나온다.
+
+### 2.1 Spring Boot와
+
+둘 다 **웹 앱·API를 빨리 올리는 풀에 가까운 쪽**이다. 언어·생태계가 다르다.
+
+| 항목 | Spring Boot | Django |
+|------|-------------|--------|
+| **언어** | Java (Kotlin도) | Python |
+| **철학** | 의존성 주입·계층(컨트롤러·서비스·리포지토리). Boot가 **자동 구성** | **배터리 포함** — 모델·관리자·인증·템플릿이 한 세트 |
+| **데이터** | JPA/Hibernate·MyBatis 등 **선택** | **내장 ORM** + 마이그레이션 |
+| **화면** | Thymeleaf·별도 프론트. API면 JSON | **템플릿 내장**. Admin UI **기본** |
+| **실행** | 내장 Tomcat 등, `jar` | `runserver` / gunicorn 등 |
+| **현장** | 공공·대기업 Java SI ([[전자정부프레임워크]]) | 스타트업·CMS·Python 팀, 관리 화면이 클 때 |
+| **성능·타입** | 정적 타입·JVM. 기동은 상대적으로 무거움 | 동적 타입. 기동·프로토타입은 가벼운 편 |
+| **가까운 짝** | Boot ≈ Django보다 **조립형**. JPA+시큐리티+MVC를 직접 붙임 | Django ≈ Boot+JPA+화면+Admin을 **처음부터 묶은** 느낌 |
+
+같은 「사이트 하나」라도 Java 공고·전자정부는 **Spring Boot**, Python·관리자 페이지 빨리면 **Django**가 자주 나온다.  
+API만 작고 빠르게면 Python은 FastAPI, Java는 Boot + Web 만으로도 간다.
+
+상세: [[Spring과 Spring Boot 학습]]
 
 ---
 

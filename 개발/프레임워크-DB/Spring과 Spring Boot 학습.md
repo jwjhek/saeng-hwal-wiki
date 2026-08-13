@@ -16,7 +16,7 @@ Java 백엔드의 사실상 표준인 **Spring**과, 그걸 쉽게 기동·구�
 - Guides: [https://spring.io/guides](https://spring.io/guides) 
 - Boot Reference: 버전별 docs.spring.io 
 
-확인일: 2026-08-06 
+확인일: 2026-08-13 
 버전은 빨리 바뀐다. **개념은 동일**하고, 패키지(`jakarta.*`)·Boot major만 사업에 맞추면 된다.
 
 ---
@@ -43,6 +43,18 @@ JDK + (Jakarta) Servlet / JPA …
 **학습 순서**: Boot만 만지작거리기 전에 **IoC·빈·DI**를 짧게라도 이해한다. 
 Boot는 “설정을 줄여 주는 도구”이지, Spring 개념을 없애 주지 않는다.
 
+### 체감
+
+| 일 | Spring만 (전통) | Spring Boot |
+|----|-----------------|-------------|
+| 의존성 | 버전을 **하나하나** 맞춤 | `spring-boot-starter-web` 한 줄에 웹 묶음 |
+| 톰캣 | 서버에 **따로 설치**하고 war 배포가 많았음 | **내장** 톰캣. `java -jar` 로 실행이 기본 |
+| XML | `web.xml`·스프링 XML이 길었음 | `application.yml` + 애너테이션이 흔함 |
+| 「빈」 | 직접 등록을 많이 함 | 클래스패스 보고 **자동 구성**. 필요할 때만 덮어씀 |
+
+지금 신규 학습·대부분의 신규 서비스는 **Boot를 쓴다.** 그래도 `@Service`, 트랜잭션, MVC는 **Spring Framework 개념**이다.  
+공공 [[전자정부프레임워크]]도 Spring 위이고, 최근 가이드는 Boot 쪽으로 온다.
+
 ### 버전 (2026)
 
 | 조합 | 비고 |
@@ -62,7 +74,7 @@ Boot는 “설정을 줄여 주는 도구”이지, Spring 개념을 없애 주�
 
 - Java OOP, 인터페이스, 예외, 컬렉션
 - HTTP / JSON 기초
-- SQL 기초 (JOIN, 트랜잭션 개념)
+- SQL 기초 (JOIN, 트랜잭션) — [[SQL 학습]]
 - Maven 또는 Gradle로 의존성 추가
 
 있으면 가속:
@@ -191,35 +203,132 @@ public class OrderController {
 
 ---
 
-## 6. 데이터 접근
+## 6. 데이터 접근 — JDBC · JPA · MyBatis
 
-선택지가 여러 개다. **하나만 먼저** 판다.
+Java에서 DB를 만지는 **바닥은 JDBC**다. JPA와 MyBatis는 그 위에 올린 **다른 스타일**이다.  
+**둘 다 배워야 하는 게 아니다.** 팀 표준 하나를 먼저 판다.
 
-| 방식 | 특징 | 언제 |
+```text
+앱 코드
+ ↓
+JPA (객체 ↔ 표)    또는    MyBatis (SQL을 내가 씀)
+ ↓
+JDBC
+ ↓
+DB ([[SQL 학습]] · [[Oracle DB와 튜닝]])
+```
+
+| 방식 | 한 줄 | 언제 |
 |------|------|------|
-| **Spring JDBC** | SQL 직접, 단순 | 소규모·학습 |
-| **MyBatis** | SQL을 XML/애너테이션으로 명시 | 공공·복잡 SQL — eGov 다수 |
-| **Spring Data JPA** | 메서드 이름·Entity로 매핑 | CRUD 빠른 개발 |
-| jOOQ 등 | 타입 세이프 SQL | 팀 표준일 때 |
+| **JDBC** (`JdbcTemplate`) | SQL을 문자열로 실행 | 소규모·학습·특수 쿼리 |
+| **JPA** (+ Hibernate 등) | **객체(엔티티)** 를 저장하면 SQL을 **프레임워크가 만듦** | CRUD·연관 관계가 많을 때 |
+| **Spring Data JPA** | JPA 위에 **저장소 인터페이스**만 선언 | Boot에서 JPA 쓸 때 기본에 가까움 |
+| **MyBatis** | **SQL을 XML(또는 애너테이션)에 직접** 적고 결과만 객체에 꽂음 | 공공·복잡 SQL·튜닝이 잦을 때 — [[전자정부프레임워크]] |
 
-### JPA
+### 6.1 JDBC가 뭔가
+
+Java 표준 **DB 연결 API**. `Connection` → `PreparedStatement` → 결과 행.  
+반복 코드가 많아서 Spring은 `JdbcTemplate`으로 줄인다.  
+JPA·MyBatis도 **결국 JDBC로 SQL을 보낸다.**
+
+### 6.2 JPA가 뭔가
+
+**JPA**(Jakarta Persistence API, 옛 이름 Java Persistence API)는 **자바 객체와 테이블을 맞추는 표준**이다.  
+구현체는 현장이 **Hibernate**인 경우가 많다. 「JPA 쓴다」≈ 보통 **Hibernate로 그 표준을 쓴다.**
+
+**ORM**(객체-관계 매핑)과 **같은 종류**다. Django ORM·SQLAlchemy가 Python에서 하는 일을, Java에서는 JPA(+ Hibernate)가 한다.  
+JPA는 ORM **제품 이름**이 아니라 **자바 표준 API**이고, Hibernate가 그 구현이다.
+
+#### Hibernate
+
+**Hibernate**는 Java **ORM 라이브러리**다. JPA 표준보다 **먼저** 나왔고, 지금은 그 표준을 **구현**하는 제품으로 쓰인다.
+
+```text
+Spring Data JPA    ← findByName 같은 저장소 (Boot에서 자주)
+        ↑
+JPA 표준           ← @Entity, EntityManager 규격
+        ↑
+Hibernate          ← SQL을 만들고 실행 (현장 기본)
+        ↑
+JDBC → DB
+```
+
+EclipseLink 등 다른 JPA 구현도 있으나, Boot `starter-data-jpa`의 **기본은 Hibernate**다.  
+`ddl-auto`, 방언(dialect), 2차 캐시 같은 설정 이름은 Hibernate에서 온 것이 많다.
+
+학습은 「Hibernate API를 따로」보다 **JPA 애너테이션 + Spring Data**로 시작하고, 로그에 찍히는 SQL이 Hibernate가 만든 것이라고 보면 된다.
+
+| 용어 | 의미 |
+|------|------|
+| **엔티티** (`@Entity`) | 표 한 행에 대응하는 **자바 클래스** |
+| **영속성 컨텍스트** | 엔티티를 모아 두고, 커밋 때 INSERT/UPDATE를 **모아 실행** |
+| **ORM** | Object-Relational Mapping — 객체 ↔ 관계형 표 |
 
 ```java
 @Entity
 public class Member {
- @Id @GeneratedValue
- private Long id;
- private String name;
+  @Id @GeneratedValue
+  private Long id;
+  private String name;
 }
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
- List<Member> findByName(String name);
+  List<Member> findByName(String name);  // 메서드 이름으로 조회 SQL 생성
 }
 ```
 
-주의: N+1, 지연로딩·트랜잭션 범위, 엔티티를 그대로 API에 노출하지 않기 (DTO 권장).
+`findByName`처럼 **메서드 이름·애너테이션**으로 쿼리를 만드는 층이 **Spring Data JPA**다. JPA 표준만으로도 `EntityManager`를 쓸 수 있다.
 
-SQL·인덱스 문제는 [[Oracle DB와 튜닝]]으로 이어진다.
+| 잘 맞음 | 주의 |
+|---------|------|
+| 회원·주문처럼 **표와 객체가 비슷** | **N+1** — 목록 후 연관 객체를 한 건씩 또 조회 |
+| 트랜잭션 안에서 객체만 고쳐도 UPDATE | **지연 로딩**을 트랜잭션 **밖**에서 치면 오류 |
+| 연관(`@ManyToOne` 등) | 엔티티를 API JSON에 **그대로 노출**하지 말 것 (DTO) |
+| `jpql` / `QueryDSL`로 조회 | 복잡한 리포트 SQL은 **버거울** 수 있음 → MyBatis·네이티브 쿼리 |
+
+SQL·인덱스가 느리면 실행 계획은 [[SQL 실행 계획]], 튜닝은 [[Oracle DB와 튜닝]].
+
+### 6.3 MyBatis가 뭔가
+
+**SQL 매퍼.** 내가 적은 `SELECT`/`INSERT`를 **메서드에 연결**하고, 결과 행을 객체 필드에 넣는다.  
+ORM처럼 객체를 저장한다고 INSERT가 **자동으로 만들어지지는 않는다.** (생성기·플러그인은 별도)
+
+```xml
+<!-- mapper XML 예 -->
+<select id="findByName" resultType="Member">
+  SELECT id, name
+    FROM member
+   WHERE name = #{name}
+</select>
+```
+
+```java
+@Mapper
+public interface MemberMapper {
+  List<Member> findByName(String name);
+}
+```
+
+| 잘 맞음 | 주의 |
+|---------|------|
+| **조인·힌트·페이징**을 SQL로 정확히 통제 | XML이 늘면 **중복·오타** |
+| 공공 eGov, 레거시 오라클 조회 | 동적 SQL(`<if>`)이 복잡해지기 쉬움 |
+| DBA와 **실행 계획**을 같이 볼 때 | 객체 그래프(연관 로딩)는 JPA만큼 **자동이 아님** |
+
+예전 이름 **iBatis**의 후신이다. 문서·구글에 iBatis가 나와도 같은 계열로 보면 된다.
+
+### 6.4 무엇으로 고르나
+
+| 상황 | 자주 가는 쪽 |
+|------|----------------|
+| Boot 개인 학습·CRUD API | **Spring Data JPA** |
+| 전자정부·복잡 SELECT·힌트 | **MyBatis** |
+| 둘 다 있는 회사 | 도메인 CRUD는 JPA, **리포트·배치 SQL**은 MyBatis — **한 쿼리에 둘을 섞어 배우지 않기** |
+| SQL을 아직 모름 | [[SQL 학습]] 먼저. 매퍼·ORM은 SQL을 **숨기지 못한다** |
+
+「JPA가 상위 기술, MyBatis가 구식」이 **아니다.** **누가 SQL을 쓰느냐**가 다를 뿐이다.
+
+SQL·인덱스 문제는 [[SQL 학습]] 다음 [[Oracle DB와 튜닝]]으로 이어진다.
 
 ---
 
@@ -437,11 +546,20 @@ JPA 또는 MyBatis 연결 → DB 저장 → 예외·검증 메시지 정리
 
 ---
 
+## 16. Django와 (한 장)
+
+Python **Django**는 Boot처럼 **웹을 빨리 올리는 쪽**이지만, **언어·기본 묶음**이 다르다. 표는 [[Django Flask FastAPI 학습]] §2.1.
+
+한 줄: Boot는 Java **부품을 자동으로 조립**, Django는 Python **배터리 포함 풀스택**. 공공 SI는 Boot, 관리 화면·CMS 성격은 Django가 자주 맞다.
+
+---
+
 ## 관련
 
 - [[전자정부프레임워크]]
 - [[Django Flask FastAPI 학습]]
 - [[Java 언어 학습]]
+- [[SQL 학습]]
 - [[디자인 패턴]]
 - [[Oracle DB와 튜닝]]
 - [[Docker 사용법]]
