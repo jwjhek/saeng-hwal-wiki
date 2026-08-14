@@ -43,7 +43,7 @@ SQL 실행·스키마 탐색·실행 계획·데이터보내기·간단한 PL/SQ
 
 1. Oracle 다운로드 페이지에서 **Windows 64-bit with JDK included**(또는 JDK 별도) 선택  
 2. Zip이면 원하는 폴더에 풀고 `sqldeveloper.exe` 실행  
-3. 첫 실행 시 **JDK 경로**를 묻으면 번들 JDK 또는 설치된 JDK 지정  
+3. 첫 실행 시 **JDK 경로**를 묻으면 번들 JDK 또는 설치된 [[JDK]] 지정  
 
 설치형·Zip형은 배포에 따라 다르다. **회사 PC**는 보안 정책·프록시·Oracle 계정 로그인 필요 여부를 확인한다.
 
@@ -231,12 +231,12 @@ SQL Developer도 **자동 커밋** 설정이 있다.
 
 ## 11. [[DBeaver 사용법]]과 비교
 
-| | SQL Developer | DBeaver CE |
-|--|---------------|------------|
-| DBMS | **Oracle 중심** (다른 DB는 제한적) | Oracle·PostgreSQL·MySQL 등 **다중** |
-| 가격 | 무료 (SQL Developer) | CE 무료 |
-| Oracle 특화 | AWR 뷰·Data Pump·PL/SQL 디버그 | 기본 실행 계획·드라이버 |
-| 회사에서 | Oracle SI·공공·금융 표준인 경우 많음 | 팀마다 혼용 |
+|           | SQL Developer              | DBeaver CE                       |
+| --------- | -------------------------- | -------------------------------- |
+| DBMS      | **Oracle 중심** (다른 DB는 제한적) | Oracle·PostgreSQL·MySQL 등 **다중** |
+| 가격        | 무료 (SQL Developer)         | CE 무료                            |
+| Oracle 특화 | AWR 뷰·Data Pump·PL/SQL 디버그 | 기본 실행 계획·드라이버                    |
+| 회사에서      | Oracle SI·공공·금융 표준인 경우 많음  | 팀마다 혼용                           |
 
 접속 정보만 맞으면 **둘 다** 같은 DB에 붙을 수 있다. 
 Oracle 튜닝·리포트는 SQL Developer, 여러 DB를 오가며 조회는 DBeaver — 이렇게 나누는 경우도 있다.

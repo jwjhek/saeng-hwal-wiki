@@ -11,8 +11,8 @@ depth: article
 Python으로 **웹 사이트·REST API**를 만들 때 가장 많이 고르는 프레임워크가 **Django**, **Flask**, **FastAPI**다. 
 세 개 모두 Python이지만 **철학·규모·실행 방식**이 달라서, 프로젝트 성격에 맞게 고르는 편이 낫다.
 
-선수: [[Python 학습과 패키지]] — venv·pip·타입 힌트·HTTP 기초.  
-Java 쪽과 비교하면 [[Spring과 Spring Boot 학습]].
+선수: [[파이썬 개발 툴]] — 인터프리터·venv·IDE. 문법은 [[Python 학습과 패키지]] (venv·pip·타입 힌트·HTTP 기초).  
+HTTP API 개념(키·상태 코드·OpenAPI)은 [[API]]. Java 쪽과 비교하면 [[Spring과 Spring Boot 학습]].
 
 공식:
 
@@ -346,11 +346,13 @@ DB 튜닝·Oracle은 [[Oracle DB와 튜닝]] · [[DBeaver 사용법]]. 컨테이
 
 ## 관련
 
+- [[API]] — REST·키·OpenAPI 개념
+- [[파이썬 개발 툴]] — 인터프리터·venv·IDE 자리
 - [[Python 학습과 패키지]] — 언어·venv·웹 패키지 표
 - [[Spring과 Spring Boot 학습]] — Java 웹과 역할 비교
 - [[전자정부프레임워크]] — 공공 Java 웹 (Python과 별축)
 - [[Docker 사용법]] — 컨테이너 배포
 - [[Git 사용법]] — 버전 관리·비밀 제외
 - [[Playwright]] — E2E (API와 별도)
-- [[VS Code 사용법]] · [[Cursor 사용법]]
+- [[VS Code 사용법]] · [[Cursor 사용법]] · [[PyCharm 사용법]]
 - [[생활위키 목차]]

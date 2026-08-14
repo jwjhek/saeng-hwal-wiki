@@ -7,7 +7,8 @@ draft: false
 
 > **분류:** AI · [[생활위키 목차]]
 
-Google의 **소스 기반(source-grounded) AI 노트북**. 
+Google의 **소스 기반(source-grounded) AI 노트북**.  
+코드 실행용 `.ipynb`([[Jupyter 노트북]])와 **이름이 비슷할 뿐 다른 제품**이다. 
 내가 올린 PDF·문서·웹·유튜브 등만 근거로 요약·질문·오디오(팟캐스트형)를 만든다. 일반 챗봇보다 **환각이 적고, 인용으로 원문을 추적**하기 쉬운 편이다.
 
 - 웹: [https://notebooklm.google.com](https://notebooklm.google.com) 
@@ -274,6 +275,7 @@ NotebookLM은 **로컬 vault를 대체하지 않는다**. 이해·브리핑용�
 ## 관련
 
 - [[현존 AI 비교]]
+- [[Jupyter 노트북]] — 코드 `.ipynb` (이 글과 다름)
 - [[생활위키 목차]]
 - [[유튜브]] — 강의·영상 소스를 모을 때
 - [[Obsidian 사용법]]

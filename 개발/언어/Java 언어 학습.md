@@ -8,7 +8,8 @@ draft: false
 > **분류:** 개발 › 언어 · [[생활위키 목차]]
 
 Java는 **객체지향 + JVM** 위에서 동작하는 정적 타입 언어다. 
-백엔드([[Spring과 Spring Boot 학습]]), 공공([[전자정부프레임워크]]), Android(최근은 Kotlin 비중↑) 등에 쓰인다.
+백엔드([[Spring과 Spring Boot 학습]]), 공공([[전자정부프레임워크]]), Android(최근은 Kotlin 비중↑) 등에 쓰인다.  
+설치·LTS·JAVA_HOME은 [[JDK]].
 
 공식·학습:
 
@@ -30,7 +31,7 @@ Java는 **객체지향 + JVM** 위에서 동작하는 정적 타입 언어다.
 ```
 
 하루에 문법만 암기하지 말고, **작은 프로그램을 직접 컴파일·실행**하는 편이 빠르다. 
-도구: JDK + [[VS Code 사용법]] / IntelliJ / [[Cursor 사용법]]
+도구: [[JDK]] + [[VS Code 사용법]] / IntelliJ / [[Cursor 사용법]]
 
 ---
 
@@ -43,7 +44,7 @@ Java는 **객체지향 + JVM** 위에서 동작하는 정적 타입 언어다.
 ```
 
 - **WORA**: Write Once, Run Anywhere (같은 바이트코드를 여러 OS JVM에서) 
-- **JDK**: 개발 도구 (`javac`, 라이브러리) 
+- **[[JDK]]**: 개발 도구 (`javac`, 라이브러리). 배포·LTS·`JAVA_HOME`은 그 글 
 - **JRE**: 실행만 (요즘 JDK에 포함되는 배포가 일반적) 
 
 ```bash
@@ -570,6 +571,7 @@ Executor, Future, 동시 컬렉션, 가상 스레드 맛보기
 ## 관련
 
 - [[생활위키 목차]]
+- [[JDK]]
 - [[디자인 패턴]]
 - [[Spring과 Spring Boot 학습]]
 - [[전자정부프레임워크]]

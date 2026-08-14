@@ -348,6 +348,7 @@ VS Code는 diff를 시각적으로 보여 주므로, 커밋 전에 UI로 한 번
 
 - [[VS Code 추천 확장]] — 용도별 추천 목록
 - [[Cursor 사용법]] — VS Code + AI
+- [[PyCharm 사용법]] — Python 전용 IDE. 지도 [[파이썬 개발 툴]]
 - [[Git 사용법]]
 - [[GitHub]]
 - [[GitLab]]

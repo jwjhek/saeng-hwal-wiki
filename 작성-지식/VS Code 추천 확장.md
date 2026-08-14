@@ -83,14 +83,17 @@ GitLens는 무료 범위만으로도 충분하다. 유료 기능은 무시해도
 
 ### Python
 
+도구 지도: [[파이썬 개발 툴]]
+
 | 확장 | 용도 |
 |------|------|
 | **Python** (MS) | 인터프리터·디버그·lint 연동 |
 | **Pylance** | 타입·자동완성 (보통 Python과 함께) |
 | **Python Debugger** | 디버그 (최근 분리된 경우) |
-| **Jupyter** | 노트북 `.ipynb` |
+| **Jupyter** | 노트북 `.ipynb` → [[Jupyter 노트북]] |
 
-venv 선택: 상태바 인터프리터 클릭. → [[Python 학습과 패키지]]
+venv 선택: 상태바 인터프리터 클릭. → [[Python 학습과 패키지]]  
+큰 저장소·리팩터는 [[PyCharm 사용법]]과 병행하는 사람도 있다. 전체 자리는 [[파이썬 개발 툴]].
 
 ### C / C++
 
@@ -292,7 +295,7 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 
 | | Continue | GitHub Copilot |
 |--|----------|----------------|
-| 모델 | 설정으로 OpenAI·Anthropic·로컬(Ollama 등) 등 | GitHub이 제공하는 모델 중심 |
+| 모델 | 설정으로 OpenAI·Anthropic·로컬([[Ollama]] 등) 등 | GitHub이 제공하는 모델 중심 |
 | 과금 | 확장 자체보다 **모델 API·로컬 GPU** 비용 | Copilot 구독 |
 | 데이터 | 키·프록시·로컬에 따라 통제 여지 | GitHub/정책 범위 |
 | UX | 사이드바 채팅·인라인 편집·컨텍스트 @ | 인라인 완성 + Chat |
@@ -305,7 +308,7 @@ ID는 확장 페이지 “Unique Identifier”를 복사한다. Copilot·Continu
 1. 확장 `Continue` 설치 
 2. 사이드바 Continue 아이콘 → 모델/제공자 설정 
 3. API 키는 **User secrets·Continue 설정**에만 (Git 커밋 금지) 
-4. 로컬이면 Ollama 등 실행 후 모델명 연결 
+4. 로컬이면 [[Ollama]] 등 실행 후 모델명 연결 
 
 설정 파일 위치는 버전마다 `~/.continue/config.json`(또는 yaml) 형태가 흔하다. UI 마법사가 있으면 그걸 우선.
 
@@ -415,5 +418,6 @@ C/C++ Extension Pack
 - [[Docker 사용법]]
 - [[Oracle DB와 튜닝]]
 - [[Java 언어 학습]]
-- [[Python 학습과 패키지]]
+- [[Python 학습과 패키지]] · [[파이썬 개발 툴]]
+- [[PyCharm 사용법]]
 - [[현존 AI 비교]]

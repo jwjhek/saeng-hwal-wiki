@@ -33,7 +33,7 @@ Eclipse는 Java 등 JVM 언어 개발에 널리 쓰이는 **IDE(통합 개발 �
 
 ## 2. 설치·첫 실행
 
-1. JDK 설치 (프로젝트 버전에 맞춤 — eGov 5.0 개발환경은 JDK 21 등) 
+1. [[JDK]] 설치 (프로젝트 버전에 맞춤 — eGov 5.0 개발환경은 JDK 21 등) 
 2. Eclipse 패키지 ZIP 또는 설치 프로그램 
 3. 실행 → **Workspace** 폴더 지정 (프로젝트들이 모이는 루트) 
 4. 필요 시 Marketplace / eGov 개발환경 플러그인 설치 
@@ -208,7 +208,7 @@ Gradle은 Buildship 플러그인. eGov는 Maven이 많은 편.
 
 최근에는 VS Code 확장·IntelliJ 가이드도 있으나, **현장 표준이 Eclipse면 Eclipse에 맞추는 것**이 협업에 유리하다.
 
-관련: [[Spring과 Spring Boot 학습]], [[Java 언어 학습]]
+관련: [[Spring과 Spring Boot 학습]], [[Java 언어 학습]], [[JDK]]
 
 ---
 
@@ -235,7 +235,8 @@ Gradle은 Buildship 플러그인. eGov는 Maven이 많은 편.
 | 무게 | 중간~무거움 | 무거움 | 가벼움 |
 | AI | 플러그인 의존 | 자체 AI | Cursor 강점 |
 
-학습·개인: Cursor로 Java를 익혀도 되고, **회사 표준이 Eclipse면** 단축키·Perspective·Servers만 익히면 충분하다.
+학습·개인: Cursor로 Java를 익혀도 되고, **회사 표준이 Eclipse면** 단축키·Perspective·Servers만 익히면 충분하다.  
+Python이면 [[PyCharm 사용법]] (VS Code·Cursor와 병행해도 된다).
 
 ---
 
@@ -254,8 +255,9 @@ Gradle은 Buildship 플러그인. eGov는 Maven이 많은 편.
 
 - [[생활위키 목차]]
 - [[전자정부프레임워크]]
-- [[Java 언어 학습]]
+- [[Java 언어 학습]] · [[JDK]]
 - [[Spring과 Spring Boot 학습]]
 - [[VS Code 사용법]]
 - [[Cursor 사용법]]
+- [[PyCharm 사용법]]
 - [[Docker 사용법]]

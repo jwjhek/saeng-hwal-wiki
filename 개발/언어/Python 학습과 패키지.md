@@ -8,7 +8,8 @@ draft: false
 > **분류:** 개발 › 언어 · [[생활위키 목차]]
 
 Python은 **문법이 단순하고 생태계가 넓은** 언어다. 
-스크립트·자동화·데이터 분석·웹·AI([[현존 AI 비교]]의 API 클라이언트)까지 한 언어로 붙이기 쉽다.
+스크립트·자동화·데이터 분석·웹·AI([[현존 AI 비교]]의 API 클라이언트)까지 한 언어로 붙이기 쉽다.  
+에디터·venv·노트북 **자리**는 [[파이썬 개발 툴]].
 
 공식: [https://www.python.org](https://www.python.org) 
 문서: [https://docs.python.org](https://docs.python.org)
@@ -25,10 +26,10 @@ Python은 **문법이 단순하고 생태계가 넓은** 언어다.
 중급 OOP·예외·가상환경(venv·conda)·패키징
 실무 pathlib·typing·테스트·비동기
 패키지 데이터 / 웹 / 자동화 / AI
-연계 Cursor·VS Code로 편집, NotebookLM으로 긴 문서 소화
+연계 Cursor·VS Code·PyCharm으로 편집, NotebookLM으로 긴 문서 소화
 ```
 
-도구: [[VS Code 사용법]] / [[Cursor 사용법]] + Python 확장, 터미널.
+도구: [[파이썬 개발 툴]] — [[VS Code 사용법]] / [[Cursor 사용법]] / [[PyCharm 사용법]] + 터미널.
 
 ---
 
@@ -217,7 +218,7 @@ with Path("a.txt").open(encoding="utf-8") as f:
 ### 8.1 Anaconda·Miniconda·conda
 
 **Anaconda**는 데이터 분석·과학 쪽에서 많이 쓰는 **배포판**이다.  
-Python + **conda** 패키지 관리자 + (풀 설치 시) Jupyter·pandas 등 묶음이 함께 온다.
+Python + **conda** 패키지 관리자 + (풀 설치 시) [[Jupyter 노트북]]·pandas 등 묶음이 함께 온다.
 
 | 이름 | 내용 |
 |------|------|
@@ -412,13 +413,13 @@ print(df.groupby("city")["sales"].sum())
 | **openai** / 각 클라우드 SDK | LLM API 호출 |
 | **langchain** / **llama-index** 등 | RAG·에이전트 오케스트레이션 (버전 변화 빠름) |
 
-학습·실험은 Jupyter와 함께 쓰는 경우가 많다 (`jupyter`, `ipython`).
+학습·실험은 [[Jupyter 노트북]]과 함께 쓰는 경우가 많다 (`jupyter`, `ipython`).
 
 ## 17. 웹·API
 
 | 패키지 | 한 줄 |
 |--------|------|
-| **requests** | 동기 HTTP 클라이언트 (입문 필수) |
+| **requests** | 동기 HTTP 클라이언트. 원격 [[API]] 호출 입문 |
 | **httpx** | 동기·비동기 HTTP |
 | **Flask** | 가벼운 웹/API |
 | **FastAPI** | 타입힌트 기반 API, OpenAPI 자동, 속도·DX 좋음 |
@@ -545,9 +546,12 @@ LLM API → 공식 SDK + 필요 시 오케스트레이션 라이브러리
 ## 관련
 
 - [[생활위키 목차]]
+- [[파이썬 개발 툴]]
 - [[Java 언어 학습]]
 - [[Spring과 Spring Boot 학습]]
 - [[Django Flask FastAPI 학습]]
+- [[PyCharm 사용법]] · [[Jupyter 노트북]]
+- [[API]]
 - [[Oracle DB와 튜닝]]
 - [[현존 AI 비교]]
 - [[Cursor 사용법]]

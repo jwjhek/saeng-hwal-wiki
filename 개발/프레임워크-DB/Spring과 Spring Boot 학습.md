@@ -155,6 +155,8 @@ public void placeOrder(...) { ... }
 
 ## 5. 웹 — Spring MVC · REST
 
+원격 호출·키·상태 코드 개념은 [[API]]. 아래는 Spring으로 **만드는** 쪽이다.
+
 ### 요청 흐름
 
 ```text
@@ -557,8 +559,8 @@ Python **Django**는 Boot처럼 **웹을 빨리 올리는 쪽**이지만, **언�
 ## 관련
 
 - [[전자정부프레임워크]]
-- [[Django Flask FastAPI 학습]]
-- [[Java 언어 학습]]
+- [[Django Flask FastAPI 학습]] · [[API]]
+- [[Java 언어 학습]] · [[JDK]]
 - [[SQL 학습]]
 - [[디자인 패턴]]
 - [[Oracle DB와 튜닝]]

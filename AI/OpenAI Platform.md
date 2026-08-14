@@ -8,7 +8,8 @@ draft: false
 > **분류:** AI · [[생활위키 목차]]
 
 [OpenAI Platform](https://platform.openai.com/)은 **개발자용 OpenAI API·대시보드**다. 
-브라우저에서 채팅하는 [ChatGPT](https://chatgpt.com) 소비자 앱과 **계정·요금·용도가 다르다**.
+브라우저에서 채팅하는 [ChatGPT](https://chatgpt.com) 소비자 앱과 **계정·요금·용도가 다르다**.  
+HTTP API 일반론(키 보관·상태 코드)은 [[API]].
 
 | | Platform (API) | ChatGPT 앱 |
 |--|----------------|------------|
@@ -21,7 +22,7 @@ draft: false
 모델·엔드포인트는 자주 바뀌므로 **공식 문서·대시보드가 최신**이다.
 
 확인일: 2026-08-06 
-관련: [[현존 AI 비교]], [[Python 학습과 패키지]], [[Cursor 사용법]]
+관련: [[현존 AI 비교]], [[API]], [[MCP]], [[Ollama]], [[Python 학습과 패키지]], [[Cursor 사용법]]
 
 ---
 
@@ -40,7 +41,8 @@ API로 만드는 것 예:
 - 음성(Realtime), 이미지 생성·분석 
 - Agents SDK로 도구 호출·멀티스텝 워크플로 
 
-ChatGPT 구독만으로는 **Platform API 호출 권한이 자동으로 생기지 않는다**. API는 Platform에서 결제·키를 별도로 연다.
+ChatGPT 구독만으로는 **Platform API 호출 권한이 자동으로 생기지 않는다**. API는 Platform에서 결제·키를 별도로 연다.  
+같은 채팅 API **모양**을 이 PC에서 쓰는 런타임은 [[Ollama]] (호환 범위는 Ollama 문서).
 
 ---
 
@@ -255,6 +257,7 @@ npm install openai
 ## 관련
 
 - [[현존 AI 비교]]
+- [[API]]
 - [[OpenAI STT]]
 - [[클라우드 AWS GCP Azure]]
 - [[Python 학습과 패키지]]
