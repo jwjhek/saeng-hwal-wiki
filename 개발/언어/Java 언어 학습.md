@@ -9,7 +9,7 @@ draft: false
 
 Java는 **객체지향 + JVM** 위에서 동작하는 정적 타입 언어다. 
 백엔드([[Spring과 Spring Boot 학습]]), 공공([[전자정부프레임워크]]), Android(최근은 Kotlin 비중↑) 등에 쓰인다.  
-설치·LTS·JAVA_HOME은 [[JDK]].
+설치·LTS·JAVA_HOME은 [[JDK]], 빌드 도구는 [[Maven과 Gradle]].
 
 공식·학습:
 
@@ -484,13 +484,12 @@ Record는 자동. 클래스 직접 쓸 때 IDE 생성 또는 Objects.hash.
 
 ## 28. 빌드 · 의존성
 
-```text
-Maven pom.xml / Gradle build.gradle
-```
+좌표로 라이브러리를 받고 jar를 만드는 도구는 [[Maven과 Gradle]]이다. Maven은 `pom.xml`, Gradle은 `build.gradle` / `.kts`.
 
 - 의존성 버전·BOM 
 - `src/main/java`, `src/test/java` 
 - 패키지 네이밍: `com.company.project` 
+- 실행은 Wrapper (`./mvnw`, `./gradlew`) — 전역 설치보다 저장소에 있는 스크립트 
 
 ---
 
@@ -560,6 +559,7 @@ Executor, Future, 동시 컬렉션, 가상 스레드 맛보기
 | 다음 | 문서 |
 |------|------|
 | 설계·패턴 | [[디자인 패턴]] |
+| 빌드·의존성 | [[Maven과 Gradle]] |
 | 웹·DI·Boot | [[Spring과 Spring Boot 학습]] |
 | 공공 표준 | [[전자정부프레임워크]] |
 | SQL·성능 | [[Oracle DB와 튜닝]] |
@@ -572,8 +572,8 @@ Executor, Future, 동시 컬렉션, 가상 스레드 맛보기
 
 - [[생활위키 목차]]
 - [[JDK]]
+- [[Maven과 Gradle]]
 - [[디자인 패턴]]
 - [[Spring과 Spring Boot 학습]]
 - [[전자정부프레임워크]]
 - [[Oracle DB와 튜닝]]
-- [[Cursor 사용법]]

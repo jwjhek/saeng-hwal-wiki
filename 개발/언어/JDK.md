@@ -25,7 +25,7 @@ aliases:
 - Eclipse Temurin (Adoptium): [https://adoptium.net](https://adoptium.net)
 - Oracle Java SE 로드맵: [https://www.oracle.com/java/technologies/java-se-support-roadmap.html](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
 
-관련: [[Java 언어 학습]] · [[Spring과 Spring Boot 학습]] · [[Eclipse 사용법]]
+관련: [[Java 언어 학습]] · [[Maven과 Gradle]] · [[Spring과 Spring Boot 학습]] · [[Eclipse 사용법]]
 
 ---
 
@@ -213,7 +213,7 @@ java Hello
 | 개인 기본 | Temurin **LTS** (확인일 기준 **25** 무난) |
 | 회사 | 사업이 적은 버전 + 라이선스 |
 | 확인 | `java -version` · `javac -version` · `where java` |
-| 다음 | [[Java 언어 학습]] → [[디자인 패턴]] → [[Spring과 Spring Boot 학습]] |
+| 다음 | [[Java 언어 학습]] → [[Maven과 Gradle]] → [[디자인 패턴]] → [[Spring과 Spring Boot 학습]] |
 
 ---
 
@@ -234,5 +234,5 @@ java Hello
 - [[Spring과 Spring Boot 학습]]
 - [[전자정부프레임워크]]
 - [[Eclipse 사용법]]
-- [[VS Code 사용법]]
+- [[Maven과 Gradle]]
 - [[안드로이드]]

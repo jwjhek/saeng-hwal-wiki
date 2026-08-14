@@ -75,7 +75,7 @@ Boot는 “설정을 줄여 주는 도구”이지, Spring 개념을 없애 주�
 - Java OOP, 인터페이스, 예외, 컬렉션
 - HTTP / JSON 기초
 - SQL 기초 (JOIN, 트랜잭션) — [[SQL 학습]]
-- Maven 또는 Gradle로 의존성 추가
+- Maven 또는 Gradle로 의존성 추가 — [[Maven과 Gradle]]
 
 있으면 가속:
 

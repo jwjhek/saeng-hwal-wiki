@@ -155,7 +155,7 @@ Eclipse는 Java 등 JVM 언어 개발에 널리 쓰이는 **IDE(통합 개발 �
 - `Run As` → `Maven build…` → goals: `clean install` 
 - `pom.xml` 의존성 오류 → 로컬 `.m2` 손상·저장소 URL·JDK 수준 확인 
 
-Gradle은 Buildship 플러그인. eGov는 Maven이 많은 편.
+Gradle은 Buildship 플러그인. eGov는 [[Maven]]이 많은 편. 비교는 [[Maven과 Gradle]].
 
 ---
 
@@ -255,9 +255,8 @@ Python이면 [[PyCharm 사용법]] (VS Code·Cursor와 병행해도 된다).
 
 - [[생활위키 목차]]
 - [[전자정부프레임워크]]
-- [[Java 언어 학습]] · [[JDK]]
+- [[Java 언어 학습]] · [[JDK]] · [[Maven과 Gradle]]
 - [[Spring과 Spring Boot 학습]]
 - [[VS Code 사용법]]
 - [[Cursor 사용법]]
-- [[PyCharm 사용법]]
 - [[Docker 사용법]]
