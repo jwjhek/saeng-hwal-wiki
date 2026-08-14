@@ -52,7 +52,7 @@ VS Code에 Copilot 확장 설치·권한
 | 목적 | **소프트웨어 작성** | 일반 비서·Office·Windows |
 | 로그인 | GitHub | Microsoft (개인/회사) |
 | 대표 UI | VS Code 인라인·Chat | copilot.microsoft.com, Edge, M365 |
-| 이 위키에서 | 이 글 · [[VS Code 추천 확장]] §10 | [[Microsoft Copilot]] · [[Microsoft Copilot과 무료 Office]] |
+| 관련 글 | 이 글 · [[VS Code 추천 확장]] §10 | [[Microsoft Copilot]] · [[Microsoft Copilot과 무료 Office]] |
 
 둘 다 Microsoft 계열 이야기에 묶여 나오지만, **구독을 따로** 산다.  
 Windows에 MS Copilot이 있어도 GitHub Copilot 완성이 자동으로 생기지는 않는다.

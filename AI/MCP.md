@@ -101,7 +101,7 @@ Cursor: [https://cursor.com/docs/mcp](https://cursor.com/docs/mcp)
 | 경로 | 설명 |
 |------|------|
 | **UI** | 설정 · Customize · Tools & MCP. 마켓에서 한 번에 넣는 안내가 있음 |
-| **프로젝트** | `.cursor/mcp.json` — 이 저장소. 팀에 공유할 때 |
+| **프로젝트** | `.cursor/mcp.json` — 프로젝트 폴더. 팀에 공유할 때 |
 | **개인** | `~/.cursor/mcp.json` — 모든 워크스페이스. Windows는 사용자 폴더 아래 `.cursor` |
 | **이름 겹침** | 같은 서버 이름이 있으면 **프로젝트 쪽이 우선**이라는 안내 |
 

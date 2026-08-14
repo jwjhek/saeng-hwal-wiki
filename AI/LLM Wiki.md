@@ -12,7 +12,7 @@ draft: false
 
 안드레이 카파시(Andrej Karpathy)가 소개한 흐름이 널리 퍼졌고, Microsoft는 VS Code 확장 **[llmwiki](https://github.com/microsoft/llmwiki)** 로 비슷한 워크플로를 제공한다.
 
-이 글은 **개념·RAG 비교·이 생활위키와의 차이**를 정리한다. 특정 제품 설치 매뉴얼 전체는 아니다.
+이 글은 **개념·RAG 비교·사람 검수형 마크다운 위키와의 차이**를 정리한다. 특정 제품 설치 매뉴얼 전체는 아니다.
 
 확인일: 2026-08-11
 

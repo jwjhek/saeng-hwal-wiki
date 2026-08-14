@@ -239,7 +239,7 @@ depth: hub
 |------|------|
 | 처음 하나만 | ChatGPT (또는 구글 중심이면 Gemini) |
 | 블로그·보고서·번역 문장 다듬기 | Claude → 결과 검수 |
-| 이 위키 md 초안·여러 파일 수정 | [[Cursor 사용법\|Cursor]] |
+| 마크다운 위키 초안·여러 파일 수정 | [[Cursor 사용법\|Cursor]] |
 | Gmail 스레드·Docs 초안 | Gemini |
 | “이 뉴스 근거 링크” | Perplexity |
 | Excel 공식·메일 초안 (회사 365) | Microsoft Copilot |
@@ -276,13 +276,13 @@ depth: hub
 
 ---
 
-## 9. 이 생활위키와의 연결
+## 9. 관련 도구
 
 | 도구 | AI와의 관계 |
 |------|-------------|
 | [[Cursor 사용법]] | 로컬 md·코드에 AI를 붙이는 메인 경로. 외부 도구는 [[MCP]] |
 | [[Ollama]] | 오픈 모델을 이 PC(또는 Ollama 클라우드)에서 실행 |
-| [[LLM Wiki]] | raw→AI 위키 패턴 (이 vault는 사람 주도 — §6) |
+| [[LLM Wiki]] | raw→AI 위키 패턴. 사람 검수형 위키와는 [[LLM Wiki]] §7 |
 | [[Obsidian 사용법]] | AI 초안을 링크로 정리·보관 |
 | [[Notion 사용법]] | 팀 문서·DB (Notion AI는 플랜에 따라) |
 | [[VS Code 사용법]] | AI 없이 편집하거나 Copilot 확장 |
@@ -315,7 +315,7 @@ depth: hub
 - 각 공식 사이트 (모델 카드·요금·데이터 정책)
 - LMSYS / Arena 등 리더보드 — **참고용**, 맹신 금지
 - [[Cursor 사용법]] — 실제 코딩·위키 작성에서의 AI
-- [[생활위키 목차]] — 이 vault 분류 목차
+- [[생활위키 목차]] — 분류 목차
 
 ---
 

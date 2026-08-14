@@ -209,7 +209,7 @@ Realtime 세션에서는 **화자 분리 미지원** — 파일 API 전용.
 |--|-------------|-----|
 | 방향 | 음성 → 텍스트 | 텍스트 → 음성 |
 | OpenAI | `/audio/transcriptions` | `/audio/speech` |
-| 이 vault 예 | 회의록·자막 원문 | [[위키 쇼츠 자동 제작]] — edge-tts 등 |
+| 예 | 회의록·자막 원문 | [[위키 쇼츠 자동 제작]] — edge-tts 등 |
 
 전사본을 LLM에 넣어 **요약·액션 아이템**을 뽑는 패턴이 흔하다 → [[OpenAI Platform]] Responses API.
 

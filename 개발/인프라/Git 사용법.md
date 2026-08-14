@@ -167,7 +167,7 @@ private/
 ```
 
 한 번 커밋된 비밀은 **이력에 남을 수 있다.** 유출 시 키 교체·이력 정리(고급)·호스팅 지원을 본다. 
-이 위키의 `private/`·`publish: false` 규칙은 vault와 맞춘다.
+민감 폴더는 `private/`·`publish: false`로 사이트 공개 범위와 맞춘다.
 
 ---
 

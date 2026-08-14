@@ -28,7 +28,7 @@ draft: false
 | 공개 | **Public** / **Private** |
 | 리뷰 | **Pull Request(PR)** 로 브랜치 병합 제안 |
 | 자동화 | **Actions**(CI/CD 워크플로) |
-| 정적 사이트 | **Pages** (이 생활위키 배포에 쓰이기도 함) |
+| 정적 사이트 | **Pages** (Quartz 같은 정적 위키에도 씀) |
 | AI | Copilot 등은 [[VS Code 추천 확장]] · 별도 구독 |
 
 ```text
@@ -98,7 +98,7 @@ Issue로 할 일을 적고 PR에 `Fixes #번호`를 넣는 흐름이 흔하다.
 | 기능 | 설명 |
 |------|------|
 | Actions | `.github/workflows/*.yml` — 테스트·빌드·배포 |
-| Pages | 정적 사이트 호스팅. 이 vault는 [[Quartz 사용법]] 빌드 → Actions 배포 |
+| Pages | 정적 사이트 호스팅. 마크다운 위키는 [[Quartz 사용법]] 빌드 → Actions 배포가 흔함 |
 | Packages | 컨테이너·라이브러리 패키지 호스팅 |
 | Codespaces | 클라우드 개발 환경 |
 | Dependabot | 의존성·보안 업데이트 PR |
@@ -117,7 +117,7 @@ Issue로 할 일을 적고 PR에 `Fixes #번호`를 넣는 흐름이 흔하다.
 | CI | Actions | GitLab CI/CD (`.gitlab-ci.yml`) |
 | 회사 | GitHub.com / Enterprise | gitlab.com / Self-managed |
 
-둘 다 원격은 [[Git 사용법]]과 같다. 이 위키·많은 개인 프로젝트는 GitHub Pages 경로가 흔하다.
+둘 다 원격은 [[Git 사용법]]과 같다. 개인 정적 사이트는 GitHub Pages 경로가 흔하다.
 
 ---
 

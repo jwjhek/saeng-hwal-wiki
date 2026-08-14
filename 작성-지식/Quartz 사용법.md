@@ -49,7 +49,7 @@ Quartz는 **편집기가 아니다.** 글은 [[Obsidian 사용법]]·[[Cursor �
 
 | 층 | 도구·경로 |
 |----|-----------|
-| 로컬 위키 | Obsidian vault = `생활위키/` 폴더 |
+| 로컬 위키 | Obsidian 콘텐츠 폴더 (빌드 `-d .`) |
 | 비공개 메모 | `private/` (gitignore), `publish: false` |
 | 사이트 홈 | `index.md` |
 | 목차 | `생활위키 목차.md` |
@@ -57,7 +57,7 @@ Quartz는 **편집기가 아니다.** 글은 [[Obsidian 사용법]]·[[Cursor �
 | 설정 | `quartz.config.yaml` |
 | 산출물 | `public/` (빌드 결과, 배포용) |
 
-상세 공개 절차·민감 정보 기준은 vault 루트 **`공개 규칙.md`** (웹에 안 올림). 이 글은 **Quartz 개념·빌드** 위주다.
+상세 공개 절차·민감 정보 기준은 로컬 전용 **`공개 규칙.md`** (웹에 안 올림). 이 글은 **Quartz 개념·빌드** 위주다.
 
 ---
 
@@ -70,7 +70,7 @@ Quartz는 **편집기가 아니다.** 글은 [[Obsidian 사용법]]·[[Cursor �
 | 위키링크 | `[[파일명]]` 네이티브 | Obsidian 전용 | Notion 링크 |
 | 선별 공개 | `publish: true` | 노트별 설정 | 페이지 권한 |
 | 커스터마 | `quartz.config.yaml`·플러그인 | 테마 제한적 | Notion UI 고정 |
-| 이 위키 | **채택** | 미사용 | [[Notion 사용법]] 별도 |
+| Quartz 정적 위키 | **채택** | 미사용 | [[Notion 사용법]] 별도 |
 
 [[GitHub]] **Pages** + Actions로 push 시 자동 배포하는 구성이 흔하다.
 
@@ -214,7 +214,7 @@ push main (또는 workflow_dispatch)
 | 스타일·경로 깨짐 | `baseUrl`이 Pages URL과 일치? |
 | 로컬만 되고 CI 실패 | Node 버전, `npm ci`, `plugin install` |
 | 비밀 글이 웹에 노출 | `publish: false`만으로는 **public repo Git에 노출** — `private/` 사용 |
-| 한글 경로·Windows | UTF-8 저장, 경로는 vault 루트 기준 `-d .` |
+| 한글 경로·Windows | UTF-8 저장, 경로는 콘텐츠 루트 기준 `-d .` |
 
 Quartz 엔진 자체를 수정할 때는 upstream([jackyzha0/quartz](https://github.com/jackyzha0/quartz))과 diff를 관리한다. 일반 글 작성만 할 때는 **설정·frontmatter**만 보면 된다.
 

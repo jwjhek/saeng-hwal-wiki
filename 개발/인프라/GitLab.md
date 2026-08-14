@@ -127,7 +127,7 @@ Kubernetes 배포·GitOps는 [[쿠버네티스]]와 겹친다.
 | 오픈소스·공개 협업·Actions 예시가 많음 | [[GitHub]] |
 | 사내 일체형(이슈+CI+패키지+보안 스캔) | GitLab이 이미 표준인 회사 많음 |
 | 직접 서버에 올리고 데이터 주권 | GitLab Self-managed |
-| Pages·이 위키형 개인 사이트 | GitHub Pages 사례가 흔함 (GitLab Pages도 있음) |
+| Pages·정적 위키형 개인 사이트 | GitHub Pages 사례가 흔함 (GitLab Pages도 있음) |
 
 개인이 둘 다 쓰는 경우: 오픈소스는 GitHub, 회사는 GitLab — **Git 조작은 동일**.
 

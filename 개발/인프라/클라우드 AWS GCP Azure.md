@@ -182,7 +182,7 @@ GKE (또는 Cloud Run) + Cloud SQL + Cloud Storage + IAM
 
 ---
 
-## 8. 이 vault와 연결
+## 8. 이 위키에서 이어지는 글
 
 | 목적 | 흔한 경로 |
 |------|-----------|

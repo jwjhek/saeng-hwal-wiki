@@ -146,7 +146,7 @@ FastAPI·Flask는 **uvicorn / flask run** 구성을 쓰거나 터미널에서 �
 | Git | 왼쪽 **Git** 도구 창. 커밋 전 diff. 원리는 [[Git 사용법]] |
 | `.env` · 키 | 실행 구성 환경 변수 또는 로컬 파일. **저장소·채팅에 붙이지 말 것** → [[API]] · [[Bitwarden 사용법]] |
 | JetBrains AI | 제품 안 어시스턴트·크레딧. [[Cursor 사용법]]·[[GitHub Copilot 사용법]]과 **구독이 별개** |
-| 위키 `.md` | 생활위키 편집은 Cursor/VS Code가 이 vault 흐름에 맞음 |
+| 위키 `.md` | 마크다운 위키는 Cursor/VS Code가 폴더 편집에 맞음 |
 
 「AI가 없는 함수를 만들어 준다」는 [[바이브 코딩]]의 환각과 같다. 실행·테스트로 확인한다.
 
@@ -162,7 +162,7 @@ FastAPI·Flask는 **uvicorn / flask run** 구성을 쓰거나 터미널에서 �
 | Python DX | 인터프리터·리팩터가 **기본이 두꺼움** | Python·Pylance 확장 → [[VS Code 추천 확장]] | 주력이 아님 |
 | AI 에이전트 | JetBrains AI (별도) | Cursor가 **에이전트**에 강함 | 플러그인 |
 | 무게 | 무거움 | 가벼움 | 중간~무거움 |
-| 이 위키 | Python 앱 | 위키·다언어·에이전트 | 공공 Java |
+| 이런 일 | Python 앱 | 위키·다언어·에이전트 | 공공 Java |
 
 IntelliJ IDEA에 Python 플러그인을 얹는 구성은 **Java가 본업**일 때 흔하다. Python만 하면 PyCharm이 메뉴가 짧다.
 

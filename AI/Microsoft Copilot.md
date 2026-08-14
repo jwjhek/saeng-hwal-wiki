@@ -101,7 +101,7 @@ OS에 붙어 있어도 **라이선스·지역·업데이트**에 따라 안 보�
 | 주 무대 | 웹·Office·Windows·일반 질문 | VS Code·IDE·저장소 코드 |
 | 결과물 | 글·표·요약·이미지 등 | 코드 제안·채팅·PR 보조 |
 | 구독 | Microsoft 계정 / M365 / 추가 라이선스 | GitHub Copilot 구독(개인·학생·조직) |
-| 이 위키 | 이 글 · [[Microsoft Copilot과 무료 Office]] | [[GitHub Copilot 사용법]] · [[VS Code 추천 확장]] |
+| 관련 글 | 이 글 · [[Microsoft Copilot과 무료 Office]] | [[GitHub Copilot 사용법]] · [[VS Code 추천 확장]] |
 
 “코파일럿 켰는데 코드 완성이 없다” → 대개 **MS Copilot만** 켠 상태다. 코딩은 [[GitHub Copilot 사용법]] 또는 [[Cursor 사용법]].
 

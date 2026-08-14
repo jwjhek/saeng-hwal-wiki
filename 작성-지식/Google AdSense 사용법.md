@@ -99,7 +99,7 @@ https://username.github.io/repo-name/ads.txt
 | 위치 | 넣는 곳 (예) |
 |------|----------------|
 | 루트 | `username.github.io` 저장소의 `ads.txt` |
-| Quartz 빌드 | vault 루트 `ads.txt` 또는 CI에서 `public/ads.txt` 생성 |
+| Quartz 빌드 | 콘텐츠 루트 `ads.txt` 또는 CI에서 `public/ads.txt` 생성 |
 
 형식 (한 줄):
 
