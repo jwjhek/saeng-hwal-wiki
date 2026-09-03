@@ -411,7 +411,7 @@ print(df.groupby("city")["sales"].sum())
 | **TensorFlow / Keras** | 딥러닝 또 다른 축 |
 | **transformers** (Hugging Face) | 사전학습 NLP·비전 모델 |
 | **openai** / 각 클라우드 SDK | LLM API 호출 |
-| **langchain** / **llama-index** 등 | RAG·에이전트 오케스트레이션 (버전 변화 빠름) |
+| **langchain** / **llama-index** 등 | [[RAG]]·에이전트 오케스트레이션 (버전 변화 빠름) |
 
 학습·실험은 [[Jupyter 노트북]]과 함께 쓰는 경우가 많다 (`jupyter`, `ipython`).
 

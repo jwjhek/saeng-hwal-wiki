@@ -37,7 +37,7 @@ HTTP API 일반론(키 보관·상태 코드)은 [[API]].
 API로 만드는 것 예:
 
 - 사내 챗봇, 문서 요약, 분류·추출(Structured Outputs) 
-- 코딩 도우미, RAG(파일 검색·자체 벡터 DB) 
+- 코딩 도우미, [[RAG]](파일 검색·자체 벡터 DB) 
 - 음성(Realtime), 이미지 생성·분석 
 - Agents SDK로 도구 호출·멀티스텝 워크플로 
 
@@ -257,10 +257,9 @@ npm install openai
 ## 관련
 
 - [[현존 AI 비교]]
+- [[RAG]]
 - [[API]]
 - [[OpenAI STT]]
 - [[클라우드 AWS GCP Azure]]
 - [[Python 학습과 패키지]]
 - [[Cursor 사용법]]
-- [[NotebookLM 사용법]]
-- [[생활위키 목차]]

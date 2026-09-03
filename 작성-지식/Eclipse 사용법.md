@@ -8,7 +8,7 @@ draft: false
 > **분류:** 작성·지식 › 에디터·IDE · [[생활위키 목차]]
 
 Eclipse는 Java 등 JVM 언어 개발에 널리 쓰이는 **IDE(통합 개발 환경)** 다. 
-국내 공공·SI에서는 [[전자정부프레임워크]] 개발환경의 기본으로 자주 등장한다.
+국내 공공·SI에서는 [[전자정부프레임워크]] 개발환경의 기본으로 자주 등장한다. 화면 솔루션 [[웹스퀘어]] 스튜디오도 이클립스 플러그인 안내가 많다.
 
 다운로드: [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/) 
 패키지: **Eclipse IDE for Enterprise Java and Web Developers** (웹·EE 할 때 추천)
@@ -254,7 +254,7 @@ Python이면 [[PyCharm 사용법]] (VS Code·Cursor와 병행해도 된다).
 ## 관련
 
 - [[생활위키 목차]]
-- [[전자정부프레임워크]]
+- [[전자정부프레임워크]] · [[웹스퀘어]]
 - [[Java 언어 학습]] · [[JDK]] · [[Maven과 Gradle]]
 - [[Spring과 Spring Boot 학습]]
 - [[VS Code 사용법]]

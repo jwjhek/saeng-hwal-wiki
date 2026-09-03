@@ -8,7 +8,7 @@ draft: false
 > **분류:** AI · [[생활위키 목차]]
 
 **LLM Wiki**는 LLM이 **원본 자료를 한 번 읽고**, 요약·개념 페이지·교차 링크가 있는 **마크다운 위키를 유지**하게 하는 지식 관리 패턴이다. 
-질문할 때마다 PDF를 처음부터 다시 뜯는 **RAG**(검색 증강 생성)와 달리, **미리 정리된 위키 층**을 읽고 답하는 쪽에 가깝다.
+질문할 때마다 PDF를 처음부터 다시 뜯는 **[[RAG]]**(검색 증강 생성)와 달리, **미리 정리된 위키 층**을 읽고 답하는 쪽에 가깝다.
 
 안드레이 카파시(Andrej Karpathy)가 소개한 흐름이 널리 퍼졌고, Microsoft는 VS Code 확장 **[llmwiki](https://github.com/microsoft/llmwiki)** 로 비슷한 워크플로를 제공한다.
 
@@ -16,7 +16,7 @@ draft: false
 
 확인일: 2026-08-11
 
-관련: [[현존 AI 비교]] · [[NotebookLM 사용법]] · [[Obsidian 사용법]] · [[Cursor 사용법]]
+관련: [[현존 AI 비교]] · [[RAG]] · [[NotebookLM 사용법]] · [[Obsidian 사용법]] · [[Cursor 사용법]]
 
 ---
 
@@ -48,7 +48,7 @@ LLM Wiki
  소스 ingest → LLM이 위키 페이지 작성·갱신 → 질문 시 위키를 먼저 읽음
 ```
 
-| | RAG | [[NotebookLM 사용법]] | LLM Wiki |
+| | [[RAG]] | [[NotebookLM 사용법]] | LLM Wiki |
 |--|-----|----------------------|----------|
 | 저장 형태 | 벡터 DB·청크 | 클라우드 노트북·소스 | 로컬 **마크다운 위키** |
 | 지식 정리 | 질의 때마다 재검색 | 소스 기반 Q&A·오디오 등 | **ingest 때** 페이지·링크 생성 |
@@ -151,12 +151,10 @@ Microsoft **llmwiki** 확장은 VS Code 안에서 ingest·검색·질의 명령�
 
 ## 관련
 
-- [[생활위키 목차]]
 - [[현존 AI 비교]]
+- [[RAG]]
 - [[NotebookLM 사용법]]
 - [[Cursor 사용법]]
-- [[Cursor 스킬 설정]]
 - [[Obsidian 사용법]]
-- [[Notion 사용법]]
 - [[OpenAI Platform]]
-- [[공개 규칙]]
+- [[젬마]]
